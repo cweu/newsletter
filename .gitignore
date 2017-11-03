@@ -1,0 +1,12 @@
+*.log
+
+# editor config
+*.sublime-project
+*.sublime-workspace
+*.komodoproject
+
+# OS garbage
+ehthumbs.db
+Thumbs.db
+.DS_Store
+.sw?
