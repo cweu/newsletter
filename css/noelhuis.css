@@ -20,229 +20,163 @@ body{
   margin-top: 10px;
 }
 
+
+
 /* START BODY ARTIKEL CSS */
-
-@import url('https://fonts.googleapis.com/css?family=Lora:400,400i,700i|Playfair+Display:400,900,900i,700i,700');
-// LORA, PLAYFAIR DISPLAY FONTS
-
-$imageWidth: 1000px;
-$imageHeight: 300px;
-
-$contentMargin: 25%;
-$contentBackgroundColor: #D8D5FC;
-
-$textMargin: 7.5%;
-$textFont: 'Lora', serif;
-$textSize: 16px;
-
-$headerMargin: 5%;
-$headerFont: 'Playfair Display black', serif;
-$headerSize: 40px;
-
-$subheaderFont: 'Lora', serif;
-$subheaderSize: 22px;
-
-$quoteFont: 'Playfair Display', serif;
-$quoteSize: 25px;
-$quoteStyle: italic;
-$quoteWidth: 250px;
-
-$footHeaderSize: 22px;
-
-* {
-    margin: 0;
-    padding: 0;
+.body .image {
+  background-color: darkgrey;
+  margin: auto;
+  min-width: calc(1000px / 1.25);
+  min-height: calc(300px / 1.25);
+  max-width: 1000px;
+  margin: 0 25px;
+  max-height: 300px;
+  display: block;
 }
 
-.content {
-    margin: auto;
+.body .image img {
+  max-width: 1000px;
+  margin: 0!important;
+  max-height: 300px;
+  width: 100%;
 }
 
-// IMAGE
-
-.image-wrapper {
-    // background-color: darkgrey;
-    margin: 0 auto;
-    max-width: 1000px;
-    max-height: 200px;
-    width: 1000px;
-    display: block;
-}
-
-.image-wrapper img {
-    width: 100%;
-}
-
-// SMALL TEXT
 .body .content small {
-    margin-left: $headerMargin;
-    margin-right: $headerMargin;
-    margin-top: 10px !important;
-    // color: grey;
-    font-size: 12px;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-top: 10px !important;
+  font-size: 12px;
 }
 
 .body .content small::before {
-    content: "___ ";
-    color: darkgrey;
-    font-weight: bold;
+  content: "___ ";
+  color: darkgrey;
+  font-weight: bold;
 }
 
-// CONTENT
 .body .content {
-    // text-align: left;
-    max-width: 750px;
-    background-color: $contentBackgroundColor;
+  max-width: 750px;
+  background-color: #D8D5FC;
 }
 
 .body .content p {
-    margin-left: $textMargin;
-    margin-right: $textMargin;
-    margin-top: 4px;
-    margin-bottom: 15px;
-    font-family: $textFont;
-    font-size: $textSize;
-    line-height: 28px;
-    letter-spacing: .5px;
+  margin-left: 7.5%;
+  margin-right: 7.5%;
+  margin-top: 4px;
+  margin-bottom: 15px;
+  font-family: "Lora", serif;
+  font-size: 16px;
+  line-height: 28px;
+  letter-spacing: .5px;
 }
 
 .body .content .intro {
-    font-family: $textFont;
-    font-size: $textSize;
-    font-style: italic;
-    line-height: 27px;
-    letter-spacing: .5px;
-    margin-bottom: 30px;
-    margin-top: 20px;
+  font-family: "Lora", serif;
+  font-size: 16px;
+  font-style: italic;
+  line-height: 27px;
+  letter-spacing: .5px;
+  margin-bottom: 30px;
+  margin-top: 20px;
 }
 
-.body .content h1 { // TITLE
-    padding-top: 20px;
-    margin-right: 25%;
-    margin-bottom: 7px;
-    font-family: $headerFont;
-    font-size: $headerSize;
+.body .content h1 {
+  padding-top: 20px;
+  margin-right: 25%;
+  font-weight: bold;
+  margin-bottom: 7px;
+  font-family: "Playfair Display", serif;
+  font-size: 40px;
 }
 
-.body .content h1, h2, h3, h4, h5, h6 {
-    margin-left: $headerMargin;
+.body .content h1, .body .content h2, .body .content h3, .body .content h4, .body .content h5, .body .content h6 {
+  margin-left: 5%;
 }
 
-.body .content h2, h3, h4, h5, h6 {
-    font-weight: bold;
-    font-style: italic;
-    font-family: $subheaderFont;
-    font-size: $subheaderSize;
+.body .content h2, .body .content h3, .body .content h4, .body .content h5, .body .content h6 {
+  font-weight: bold;
+  font-style: italic;
+  font-family: "Lora", serif;
+  font-size: 20px;
 }
 
 .body .content q {
-    font-family: $quoteFont;
-    font-size: $quoteSize;
-    font-style: $quoteStyle;
-    margin: 8px;
-    max-width: $quoteWidth;
-    word-wrap: break-word;
-    padding-right: $textMargin;
+  font-family: "Playfair Display", serif;
+  font-size: 25px;
+  font-style: italic;
+  margin: 8px;
+  max-width: 250px;
+  word-wrap: break-word;
+  padding-right: 7.5%;
 }
 
 q {
-    float:right;
-    shape-outside: box();
+  float: right;
+  -webkit-shape-outside: box();
+  shape-outside: box();
 }
 
 q span {
-    display: inline-block;
+  display: inline-block;
 }
 
 p.bio {
-    margin-left: $headerMargin !important;
-    margin-right: $headerMargin !important;
-    margin-top: 35px !important;
-    font-style: italic !important;
-    line-height: 20px !important;
+  margin-left: 5% !important;
+  margin-right: 5% !important;
+  margin-top: 35px !important;
+  font-style: italic !important;
+  line-height: 20px !important;
 }
 
 .foot h1, .foot h2, .foot h3, .foot h4, .foot h5, .foot h6, .foot p, .foot ul {
-    margin-left: $headerMargin !important;
-    margin-right: $headerMargin !important;
+  margin-left: 5% !important;
+  margin-right: 5% !important;
 }
 
 .foot ul {
-    margin-top: 20px;
+  margin-top: 20px;
 }
 
 .foot ul li:not(:first-child) {
-    list-style: none;
-    display: inline-block;
-    width: 31%;
-    margin-left: 2.5%;
-    // margin-right: 10px;
-    height: 199px;
-    overflow: hidden;
+  list-style: none;
+  display: inline-block;
+  width: 31%;
+  margin-left: 2.5%;
+  height: 199px;
+  overflow: hidden;
 }
 
 .foot ul li {
-    list-style: none;
-    display: inline-block;
-    width: 31%;
-    height: 199px;
-    overflow: hidden;
+  list-style: none;
+  display: inline-block;
+  width: 31%;
+  height: 199px;
+  overflow: hidden;
 }
 
 .foot ul li h2 {
-    font-size: $footHeaderSize !important;
-    margin-left: 0 !important;
+  font-size: 22px !important;
+  margin-left: 0 !important;
 }
 
 .foot {
-    padding-bottom: 40px;
+  padding-bottom: 40px;
 }
 
 .icons img {
-    display: inline-block;
-    height: 40px;
-    width: 40px;
-    margin-left: $headerMargin;
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  margin-left: 5%;
 }
 
 .icons {
-    margin-top: 10px;
-    margin-bottom: 20px;
+  margin-top: 10px;
+  margin-bottom: 20px;
 }
-
-@media only screen and (max-device-width: 1000px) {
-    .body {
-        max-width: 100% !important;
-        width: 100% !important;
-        padding: 0 !important;
-    }
-
-    .body .content {
-        max-width: 100% !important;
-        width: 100% !important;
-    }
-
-    .body .content > h1 {
-        font-size: 280% !important;
-        line-height: 110% !important;
-    }
-
-    .body .content > h2, h3, h4, h5, h6, p, q {
-        font-size: 200% !important;
-        line-height: 110% !important;
-    }
-
-    .body .content > p.bio {
-        line-height: 105% !important;
-    }
-
-    .body .content ul li p.bio {
-        font-size: 100% !important;
-    }
-}
-
-
 /*END BODY ARTIKEL CSS*/
+
+
 
 .footer {
   max-width: 920px;
