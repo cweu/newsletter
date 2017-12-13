@@ -7,9 +7,9 @@
 <?php get_header(); ?>
 
 <div class="body">
-  <div class="image">
+  <!-- <div class="image">
       <img src="<?php echo $featured_img; ?>" alt="">
-  </div>
+  </div> -->
   <div class="content">
     <h1>Archief</h1>
     <div class="row archief">

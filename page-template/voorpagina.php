@@ -9,74 +9,81 @@
 <div class="container">
     <?php
       $params = array(
-        'limit' => 10,
+        'limit' => 1,
         'orderby' => 'datum DESC'
       );
-      $artikel = pods('artikel', $params);
-      $i = 1;
-
-      if($artikel->total() > 0){
-        while($artikel->fetch()){
-          $title = $artikel->display('name');
-          $intro = $artikel->display('intro.name');
-          $content = $artikel->display('content');
-          $auteur = $artikel->display('auteur.name');
-          $featured_img = pods_image_url(
-          $artikel->field('featured_img.name'),
-            'thumbnail',
-            0,
-            true
+      $nieuwsbrief_artikel = pods('nieuwsbrief', $params);
+      if($nieuwsbrief_artikel->total() > 0){
+        while($nieuwsbrief_artikel->fetch()){
+          $nieuwsbrief_artikel_jaargang_nummer = $nieuwsbrief_artikel->display('jaargang_nummer.name');
+          $params = array(
+            'limit' => 10,
+            'orderby' => 'datum DESC',
           );
-          if($intro != ''){
-            $content = $intro;
-          }else{
-            $content = $content;
-          }
-          if($featured_img != ''){
-            $img = '<img src="'.$featured_img.'">';
-          } else {
-            $img = '';
-          }
-          $permalink = site_url('artikel/' . $artikel->field('permalink'));
-          $id = $artikel->field('id');
+          $artikel = pods('artikel', $params);
+          $i = 1;
 
-          if($i == 1){
-            echo '
-            <a href="'.$permalink.'">
-              <div class="topartikel">
-                <img src="'.$img.'">
-              </div>
-
-              <div class="topartikel">
-                <h1>'.$title.'</h1>
-                <h3>'.$auteur.'</h3>
-                <span>'.$content.'</span>
-                <br>
-              </div>
-            </a>
-          <hr>
-            <h1 class="artikelen">Artikelen</h1>
-            <div class="grid">
-              <div class="grid-sizer"></div>';
-          } else {
-            echo '
-              <div class="grid-item">
-                <a href="'.$permalink.'">
-                  <h2>'.$title.'</h2>
-                  <p>'.$content.'</p>
-                  '.$img.'
-                </a>
-              </div>
-            ';
-            if($i == $artikel->total()){
-
+          if($artikel->total() > 0){
+            while($artikel->fetch()){
+              $jaargang_nummer = $artikel->field('jaargang_nummer.name');
+              if($jaargang_nummer == $nieuwsbrief_artikel_jaargang_nummer){
+                $title = $artikel->display('name');
+                $intro = $artikel->display('intro.name');
+                $content = $artikel->display('content');
+                $auteur = $artikel->display('auteur.name');
+                $gridImage = pods_image_url(
+                $artikel->field('grid_img'),
+                  'thumbnail',
+                  0,
+                  true
+                );
+                if($intro != ''){
+                  $content = $intro;
+                }else{
+                  $content = $content;
+                }
+                if($gridImage != ''){
+                  $img = '<img src="'.$gridImage.'" name="$title">';
+                } else {
+                  $img = '';
+                }
+                $permalink = site_url('artikel/' . $artikel->field('permalink'));
+                $id = $artikel->field('id');
+                if($i == 1){
+                  echo '
+                    <a href="'.$permalink.'">
+                      <div class="topartikel">
+                        '.$img.'
+                      </div>
+                      <div class="topartikel">
+                        <h1>'.$title.'</h1>
+                        <h3>'.$auteur.'</h3>
+                        <span>'.$content.'</span>
+                        <br>
+                      </div>
+                    </a>
+                  <hr>
+                    <h1 class="artikelen">Artikelen</h1>
+                    <div class="grid">
+                      <div class="grid-sizer"></div>';
+                  } else {
+                    echo '
+                      <div class="grid-item">
+                        <a href="'.$permalink.'">
+                          <h2>'.$title.'</h2>
+                          <p>'.$content.'</p>
+                          '.$img.'
+                        </a>
+                      </div>
+                    ';
+                  }
+                  $i = $i + 1;
+              }
             }
           }
-          $i = $i + 1;
         }
       }
     ?>
-  </div>
 </div>
 
 <hr>
@@ -95,7 +102,7 @@
       while($nieuwsbrief->fetch()){
         $jaargang_nummer = $nieuwsbrief->display('jaargang_nummer.name');
         $jaargang_nummer = explode(".", $jaargang_nummer);
-        $naam = $nieuwsbrief->display('naam.name');
+        $naam = $nieuwsbrief->display('name');
         $pdf = pods_image_url(
           $nieuwsbrief->field('pdf_input'),
           'thumbnail',
@@ -111,7 +118,7 @@
         echo '
         <div class="jaargang">
           <a href="'.$pdf.'" target="_blank">
-            <h3>Jaargang '.$jaargang_nummer[0].' nr.'.$jaargang_nummer[1].'</h3>
+            <h3>Jaargang '.$jaargang_nummer[0].' nr. '.$jaargang_nummer[1].'</h3>
             <p>'.$naam.'</p>
             <img src="'.$thumbnail.'" alt="'.$naam.'"><br>
             OPEN

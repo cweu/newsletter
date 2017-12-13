@@ -8,9 +8,9 @@
 
 <div class="body">
     <!-- START IMAGE -->
-    <div class="image">
+    <!-- <div class="image">
         <img src="<?php echo $featured_img; ?>" alt="">
-    </div>
+    </div> -->
     <!-- END IMAGE -->
 
     <!-- START CONTENT -->

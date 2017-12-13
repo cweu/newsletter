@@ -33,7 +33,7 @@ body{
 
 .body .image img {
   max-width: 1000px;
-  margin: 0 25px;
+  margin: 0!important;
   max-height: 300px;
   width: 100%;
 }

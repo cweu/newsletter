@@ -22,8 +22,8 @@
           $title = $artikel->display('name');
           $intro = $artikel->display('intro.name');
           $content = $artikel->display('content');
-          $featured_img = pods_image_url(
-            $artikel->field('featured_img.name'),
+          $gridImage = pods_image_url(
+            $artikel->field('grid_img'),
             'thumbnail',
             0,
             true
@@ -33,8 +33,8 @@
           }else{
             $content = $content;
           }
-          if($featured_img != ''){
-            $img = '<img src="'.$featured_img.'">';
+          if($gridImage != ''){
+            $img = '<img src="'.$gridImage.'" alt="'.$title.'">';
           } else {
             $img = '';
           }

@@ -18,18 +18,27 @@
   $datum = $pods->field('datum.name');
   $auteur_bio = $pods->field('auteur_bio.name'); // Auteur
   $illustratie = $pods->field('illustratie.name'); // Illustratue auteur
-  $featured_img = $pods->field('featured_img.name');
+  $featured_img = pods_image_url(
+    $pods->field('featured_img'),
+    'thumbnail',
+    0,
+    true
+  );
   $jaargang_nummer = $pods->field('jaargang_nummer.name');
   $permalink = site_url('artikel/' . $pods->field('permalink'));
   $url_encode = urlencode($permalink);
+
+  if($featured_img != ''){
+    $img = '<div class="image"><img src="'.$featured_img.'" alt="'.$title.'"></div>';
+  } else {
+    $img = '';
+  }
 ?>
 
 
 <div class="body">
     <!-- START IMAGE -->
-    <div class="image">
-        <img src="<?php echo $featured_img; ?>" alt="">
-    </div>
+    <?php echo $img; ?>
     <!-- END IMAGE -->
 
     <!-- START CONTENT -->
