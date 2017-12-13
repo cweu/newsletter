@@ -406,8 +406,9 @@ font-style: italic;}
 }
 
 hr {
-  background-color: white;
-  border-top: 2px dotted black; }
+  background-color: transparent;
+  border-top: 7.5px dotted black;
+  border-bottom: white;}
 
 .grid-item p {
   letter-spacing: .3px;
