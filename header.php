@@ -29,7 +29,7 @@
   <nav class="navigatie">
       <ul>
         <img src="<?php echo bloginfo('template_url');?>/img/logo_cwa.png" alt="Catholic Worker Amsterdam" class="navimage">
-        <p class="tekstonderlogo">Nieuwsbrief Jeanette Noëlhuis</p>
+        <p class="tekstonderlogo">Nieuwsbrief Jeannette Noëlhuis</p>
         <!-- <li>colofon</li>
         <li>agenda</li>
         <li>archief</li>
