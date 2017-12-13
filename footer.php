@@ -14,7 +14,7 @@
   <div class="sections">
     <div class="links">
       <h2>Aanmelden Nieuwsbrief</h2>
-      <p>Wilt u zich aanmelden voor deze nieuwbrief.<br> Stuur ons hieronder uw emailadres.</p>
+      <p>Wilt u zich aanmelden voor deze nieuwbrief?<br> Stuur ons hieronder uw emailadres.</p>
       <input type="text" name="email" value="" placeholder="   E-MAIL"></br>
       <button type="button" name="button">AANMELDEN</button>
     </div>
