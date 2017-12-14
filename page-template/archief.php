@@ -6,13 +6,13 @@
 
 <?php get_header(); ?>
 
-<div class="body">
+<div class="archief container">
   <!-- <div class="image">
       <img src="<?php echo $featured_img; ?>" alt="">
   </div> -->
   <div class="content">
     <h1>Archief</h1>
-    <div class="row archief">
+    <ul class="archief_list">
       <?php
         $params = array(
           'limit' => 15,
@@ -39,15 +39,16 @@
               true
             );
             echo '
-            <div class="col">
+            <li class="archief_list_item">
               <h3>Jaargang '.$jaargang_nummer[0].' nr. '.$jaargang_nummer[1].'</h3>
-              <div class="img_container">
+              <p><!-- TEXT --></p>
+              <div class="block">
                 <img src="'.$thumbnail.'" alt="'.$naam.'">
                 <div class="overlay">
-                  <div class="center"><a href="'.$pdf.'" target="_blank">OPEN</a></div>
+                  <button type="button" name="button">OPEN</button>
                 </div>
               </div>
-            </div>';
+            </li>';
           }
         }
       ?>
@@ -56,7 +57,7 @@
         echo $nieuwsbrief->pagination(array('type' => 'advanced'));
         echo '<br><br>';
       ?>
-    </div>
+    </ul>
   </div>
 </div>
 
