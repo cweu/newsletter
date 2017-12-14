@@ -23,52 +23,50 @@ body{
 
 
 /* START BODY ARTIKEL CSS */
-.body .image {
-  background-color: darkgrey;
-  margin: auto;
-  min-width: calc(1000px / 1.25);
-  min-height: calc(300px / 1.25);
-  max-width: 1000px;
-  margin: 0 25px;
-  max-height: 300px;
-  display: block;
-}
 
-.body .image img {
+
+@import url("https://fonts.googleapis.com/css?family=Lora:400,400i,700i|Playfair+Display:400,900,900i,700i,700");
+* {
+  margin: 0;
+  padding: 0; }
+
+.content {
+  margin: auto; }
+
+.image-wrapper {
+  margin: 0 auto;
   max-width: 1000px;
-  margin: 0!important;
-  max-height: 300px;
-  width: 100%;
-}
+  max-height: 200px;
+  width: 1000px;
+  display: block; }
+
+.image-wrapper img {
+  width: 100%; }
 
 .body .content small {
   margin-left: 5%;
   margin-right: 5%;
   margin-top: 10px !important;
-  font-size: 12px;
-}
+  font-size: 12px; }
 
 .body .content small::before {
   content: "___ ";
   color: darkgrey;
-  font-weight: bold;
-}
+  font-weight: bold; }
 
 .body .content {
   max-width: 750px;
-  background-color: #D8D5FC;
-}
+  background-color: #D8D5FC; }
 
 .body .content p {
-  margin-left: 7.5%;
+  margin-left: 9.5%;
   margin-right: 7.5%;
   margin-top: 4px;
   margin-bottom: 15px;
   font-family: "Lora", serif;
   font-size: 16px;
   line-height: 28px;
-  letter-spacing: .5px;
-}
+  letter-spacing: .5px; }
 
 .body .content .intro {
   font-family: "Lora", serif;
@@ -77,28 +75,23 @@ body{
   line-height: 27px;
   letter-spacing: .5px;
   margin-bottom: 30px;
-  margin-top: 20px;
-}
+  margin-top: 20px; }
 
 .body .content h1 {
   padding-top: 20px;
   margin-right: 25%;
-  font-weight: bold;
   margin-bottom: 7px;
-  font-family: "Playfair Display", serif;
-  font-size: 40px;
-}
+  font-family: "Playfair Display black", serif;
+  font-size: 40px; }
 
-.body .content h1, .body .content h2, .body .content h3, .body .content h4, .body .content h5, .body .content h6 {
-  margin-left: 5%;
-}
+.body .content h1, h2, h3, h4, h5, h6 {
+  margin-left: 5%; }
 
-.body .content h2, .body .content h3, .body .content h4, .body .content h5, .body .content h6 {
+.body .content h2, h3, h4, h5, h6 {
   font-weight: bold;
   font-style: italic;
   font-family: "Lora", serif;
-  font-size: 20px;
-}
+  font-size: 22px; }
 
 .body .content q {
   font-family: "Playfair Display", serif;
@@ -107,35 +100,29 @@ body{
   margin: 8px;
   max-width: 250px;
   word-wrap: break-word;
-  padding-right: 7.5%;
-}
+  padding-right: 12.5%; }
 
 q {
   float: right;
   -webkit-shape-outside: box();
-  shape-outside: box();
-}
+  shape-outside: box(); }
 
 q span {
-  display: inline-block;
-}
+  display: inline-block; }
 
 p.bio {
   margin-left: 5% !important;
   margin-right: 5% !important;
   margin-top: 35px !important;
   font-style: italic !important;
-  line-height: 20px !important;
-}
+  line-height: 20px !important; }
 
 .foot h1, .foot h2, .foot h3, .foot h4, .foot h5, .foot h6, .foot p, .foot ul {
   margin-left: 5% !important;
-  margin-right: 5% !important;
-}
+  margin-right: 5% !important; }
 
 .foot ul {
-  margin-top: 20px;
-}
+  margin-top: 20px; }
 
 .foot ul li:not(:first-child) {
   list-style: none;
@@ -143,37 +130,58 @@ p.bio {
   width: 31%;
   margin-left: 2.5%;
   height: 199px;
-  overflow: hidden;
-}
+  overflow: hidden; }
 
 .foot ul li {
   list-style: none;
   display: inline-block;
   width: 31%;
   height: 199px;
-  overflow: hidden;
-}
+  overflow: hidden; }
 
 .foot ul li h2 {
   font-size: 22px !important;
-  margin-left: 0 !important;
-}
+  margin-left: 0 !important; }
 
 .foot {
-  padding-bottom: 40px;
-}
+  padding-bottom: 40px; }
 
 .icons img {
   display: inline-block;
   height: 40px;
   width: 40px;
-  margin-left: 5%;
-}
+  margin-left: 5%; }
 
 .icons {
   margin-top: 10px;
-  margin-bottom: 20px;
+  margin-bottom: 20px; }
+
+@media only screen and (max-device-width: 1000px) {
+  .body {
+    max-width: 100% !important;
+    width: 100% !important;
+    padding: 0 !important; }
+  .body .content {
+    max-width: 100% !important;
+    width: 100% !important; }
+  .body .content > h1 {
+    font-size: 280% !important;
+    line-height: 110% !important; }
+  .body .content > h2, h3, h4, h5, h6, p, q {
+    font-size: 200% !important;
+    line-height: 110% !important; }
+  .body .content > p.bio {
+    line-height: 105% !important; }
+  .body .content ul li p.bio {
+    font-size: 100% !important; }
+  .body .content p {
+  	margin-right: 10%;
+  	margin-left: 8.5%;
+  }
 }
+
+
+
 /*END BODY ARTIKEL CSS*/
 
 
@@ -311,7 +319,7 @@ footer .midden li a {
 }
 
 .body .content li {
-  margin-left: 12.5%;
+  margin-left: 7.5%;
   margin-right: 7.5%;
   margin-top: 4px;
   font-family: "Lora", serif;
