@@ -52,7 +52,7 @@ body{
   margin-right: 5%;
   margin-top: 10px !important;
   font-size: 12px;
-
+  font-family: 'AVENIR', serif;
 }
 
 .body .content small::before {
@@ -70,13 +70,13 @@ body{
   margin-top: 4px;
   margin-bottom: 15px;
   font-family: "Lora", serif;
-  font-size: 16px;
-  line-height: 28px;
+  font-size: 18px;
+  line-height: 32px;
   letter-spacing: .5px; }
 
 .body .content .intro {
   font-family: "Lora", serif;
-  font-size: 16px;
+  font-size: 18px;
   font-style: italic;
   line-height: 27px;
   letter-spacing: .5px;
@@ -686,7 +686,7 @@ select {
   padding: 5px;
   padding-right: 100px;
   width: auto;
-  font-size: 16px;
+  font-size: 18px;
   line-height: 1;
   border: 1px solid lightgrey;
   outline: none;
