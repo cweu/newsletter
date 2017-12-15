@@ -550,12 +550,12 @@ h2, h3, h4, h5, h6 {
   transition: .5s ease;
   background-color: rgba(0, 0, 0, 0.5); }
 
-.archief .content .archief_list .archief_list_item .overlay a {
+.archief .content .archief_list .archief_list_item .overlay button {
   position: relative;
   top: 42.5%;
   left: 25%; }
 
-.archief .content .archief_list .archief_list_item .overlay a {
+.archief .content .archief_list .archief_list_item .overlay button {
   padding: 10px;
   width: 50%; }
 

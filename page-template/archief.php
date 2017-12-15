@@ -40,7 +40,7 @@
               <div class="block">
                 <img src="'.$thumbnail.'" alt="'.$naam.'">
                 <div class="overlay">
-                  <a type="button" name="button" href="'.$permalink.'">OPEN</a>
+                  <a type="button" name="button" href="'.$permalink.'"><button type="button" name="button">OPEN</button></a>
                 </div>
               </div>
             </li>';
