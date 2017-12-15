@@ -5,7 +5,7 @@
 }
 
 body{
-  width: 1000px;
+  /*width: 1000px;*/
   margin: 0 auto;
 }
 
@@ -84,7 +84,7 @@ body{
   font-family: "Playfair Display black", serif;
   font-size: 40px; }
 
-.body .content h1, h2, h3, h4, h5, h6 {
+.body .m-left h1, .body .m-left h2, .body .m-left h3, .body .m-left h4, .body .m-left h5, .body .m-left h6 {
   margin-left: 5%; }
 
 .body .content h2, h3, h4, h5, h6 {
@@ -240,7 +240,6 @@ p.bio {
   border: 2px solid #C7C3FC;
   background-color: #C7C3FC;
   -webkit-transition: 1s;
-  -o-transition: 1s;
   transition: 1s;
 }
 
@@ -319,7 +318,7 @@ footer .midden li a {
 }
 
 .body .content li {
-  margin-left: 7.5%;
+  margin-left: 9.5%;
   margin-right: 7.5%;
   margin-top: 4px;
   font-family: "Lora", serif;
@@ -407,8 +406,7 @@ font-style: italic;}
   display: -webkit-box;
   -webkit-line-clamp: 7;
   overflow: hidden;
-  -o-text-overflow: ellipsis;
-     text-overflow: ellipsis;
+  text-overflow: ellipsis;
   -webkit-box-orient: vertical;
   color: black;
 }
@@ -425,8 +423,7 @@ hr {
   display: -webkit-box;
   -webkit-line-clamp: 5;
   overflow: hidden;
-  -o-text-overflow: ellipsis;
-     text-overflow: ellipsis;
+  text-overflow: ellipsis;
   -webkit-box-orient: vertical
 }
 
@@ -550,7 +547,6 @@ h2, h3, h4, h5, h6 {
   height: 100%;
   top: -30px;
   -webkit-transition: .5s ease;
-  -o-transition: .5s ease;
   transition: .5s ease;
   background-color: rgba(0, 0, 0, 0.5); }
 
@@ -637,7 +633,6 @@ h2, h3, h4, h5, h6 {
     transform: translateY(-100%);*/
     top: -30px;
     -webkit-transition: .5s ease;
-    -o-transition: .5s ease;
     transition: .5s ease;
     background-color: rgba(0, 0, 0, 0.5); }
   .archief .content .archief_list .archief_list_item h3 {

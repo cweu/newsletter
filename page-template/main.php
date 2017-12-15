@@ -14,7 +14,7 @@
     <!-- END IMAGE -->
 
     <!-- START CONTENT -->
-    <div class="content">
+    <div class="content m-left">
       <?php
       if(have_posts()):
         while(have_posts()): the_post(); ?>

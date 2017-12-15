@@ -103,12 +103,7 @@
         $jaargang_nummer = $nieuwsbrief->display('jaargang_nummer.name');
         $jaargang_nummer = explode(".", $jaargang_nummer);
         $naam = $nieuwsbrief->display('name');
-        $pdf = pods_image_url(
-          $nieuwsbrief->field('pdf_input'),
-          'thumbnail',
-          0,
-          true
-        );
+        $permalink = site_url('artikel/' . $nieuwsbrief->field('permalink'));
         $thumbnail = pods_image_url(
           $nieuwsbrief->field( 'image'),
           'thumbnail',
@@ -117,7 +112,7 @@
         );
         echo '
         <div class="jaargang">
-          <a href="'.$pdf.'" target="_blank">
+          <a href="'.$permalink.'" target="_blank">
             <h3>Jaargang '.$jaargang_nummer[0].' nr. '.$jaargang_nummer[1].'</h3>
             <p>'.$naam.'</p>
             <img src="'.$thumbnail.'" alt="'.$naam.'"><br>

@@ -26,12 +26,7 @@
             $jaargang_nummer = explode(".", $jaargang_nummer);
             $naam = $nieuwsbrief->display('naam.name');
             $datum = $nieuwsbrief->field('datum.name');
-            $pdf = pods_image_url(
-              $nieuwsbrief->field('pdf_input'),
-              'thumbnail',
-              0,
-              true
-            );
+            $permalink = site_url('artikel/' . $nieuwsbrief->field('permalink'));
             $thumbnail = pods_image_url(
               $nieuwsbrief->field( 'image'),
               'thumbnail',
@@ -45,7 +40,7 @@
               <div class="block">
                 <img src="'.$thumbnail.'" alt="'.$naam.'">
                 <div class="overlay">
-                  <button type="button" name="button">OPEN</button>
+                  <a type="button" name="button" href="'.$permalink.'">OPEN</a>
                 </div>
               </div>
             </li>';
