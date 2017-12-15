@@ -38,7 +38,9 @@ body{
   max-width: 1000px;
   max-height: 200px;
   width: 1000px;
-  display: block; }
+  display: block;
+  height: 300px;
+}
 
 .body .image img {
   width: 100%; }
