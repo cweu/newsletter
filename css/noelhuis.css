@@ -33,14 +33,14 @@ body{
 .content {
   margin: auto; }
 
-.image-wrapper {
+.body .image {
   margin: 0 auto;
   max-width: 1000px;
   max-height: 200px;
   width: 1000px;
   display: block; }
 
-.image-wrapper img {
+.body .image img {
   width: 100%; }
 
 .body .content small {
