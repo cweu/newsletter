@@ -214,6 +214,7 @@ p.bio {
 
 .footer img {
   width: 50px;
+  opacity: .8;
 }
 
 .footer h2 {
