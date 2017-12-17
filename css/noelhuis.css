@@ -409,7 +409,9 @@ footer .midden li a {
 .grid-item h2{
   letter-spacing: .3px;
 font-family: "Lora", serif;
-font-style: italic;}
+font-style: italic;
+padding-bottom: 3%;
+}
 
 .topartikel p{
   display: block;
