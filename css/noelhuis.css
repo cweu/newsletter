@@ -273,6 +273,10 @@ footer .midden li {
   margin-bottom: 15px;
 }
 
+footer .midden li:hover {
+  border-bottom: 2px solid #D8D5FC;
+}
+
 footer .midden li a {
   font-weight: lighter;
   font-size: 1.2em;
@@ -307,6 +311,15 @@ footer .midden li a {
   font-family: sans-serif;
   text-transform: uppercase;
   z-index: 1;
+  transition: 1s;
+}
+
+.navigatie li:hover {
+  border-bottom: 2px solid #D8D5FC;
+}
+
+.active {
+  border-bottom: 2px solid rgb(208, 208, 208);
 }
 
 .navimage {
