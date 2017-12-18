@@ -88,6 +88,10 @@ body{
   margin-bottom: 30px;
   margin-top: 20px; }
 
+.body .content p h3 {
+  margin-top: 20px;
+}
+
 .body .content h1 {
   padding-top: 40px;
   margin-right: 25%;
@@ -98,6 +102,11 @@ body{
 
 .body .m-left h1, .body .m-left h2, .body .m-left h3, .body .m-left h4, .body .m-left h5, .body .m-left h6 {
   margin-left: 5%; }
+
+  .body .m-left h1, .body .m-left h2, .body .m-left h3, .body .m-left h4, .body .m-left h5 {
+  margin-left: 5%;
+  margin-top: 10px;
+}
 
 .body .content p h2,.body .content p h3,.body .content p h4,.body .content p h5,.body .content p h6 {
   font-weight: bold;
