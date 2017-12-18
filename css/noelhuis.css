@@ -1,4 +1,9 @@
 @import url("https://fonts.googleapis.com/css?family=Lora:400,400i,700i|Playfair+Display:400,900,900i,700i,700");
+@font-face {
+    font-family: Avenir;
+    src: url("../fonts/Avenir_Roman.otf") format("opentype");
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -52,7 +57,7 @@ body{
   margin-right: 5%;
   margin-top: 10px !important;
   font-size: 12px;
-  font-family: 'AVENIR', serif;
+  font-family: 'Avenir', serif;
 }
 
 .body .content small::before {
