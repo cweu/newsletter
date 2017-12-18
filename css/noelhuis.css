@@ -159,7 +159,11 @@ p.bio {
   display: inline-block;
   height: 40px;
   width: 40px;
-  margin-left: 20px; }
+  margin-left: 10px;
+}
+.icons a:first-child {
+  margin-left: 4%;
+}
 
 .icons {
   margin-top: 10px;
