@@ -16,7 +16,7 @@
       <?php
         $params = array(
           'limit' => 15,
-          'orderby' => 'datum ASC'
+          'orderby' => 'datum DESC'
         );
         $nieuwsbrief = pods('nieuwsbrief', $params);
 
