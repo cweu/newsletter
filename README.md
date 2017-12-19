@@ -39,3 +39,10 @@ Navigatie config
 2. Ga naar 'Weergeven' en dan naar 'Menu's' in je linker sidebalk.
 3. zet dan bij 'Footer' neer: 1. Archief 2. Dossiers 3. Contact (Contact is een aangepast link naar Colofon)
 4. zet dan bij 'Header' neer 1. Voorpagina 2. Colofoon 3. Agenda 4. Archief
+
+# Nog niet af
+
+* Aanmelden nieuwsbrief
+* Documentatie artikel
+* Documentatie nieuwsbrief
+
