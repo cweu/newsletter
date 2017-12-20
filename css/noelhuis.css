@@ -193,8 +193,6 @@ p.bio {
 
 /*END BODY ARTIKEL CSS*/
 
-
-
 .footer {
   max-width: 920px;
   margin-left: auto;
@@ -742,3 +740,98 @@ select {
   .artikel small{
     font-size: 1.2em!important;
   }
+
+
+@media screen and (max-width: 360px) {
+
+  * {
+    margin: 0;
+    padding: 0;
+    width: 360px;
+  }
+
+  .navimage {
+    width: 250px;
+    padding-top: 10px;
+  }
+
+  .tekstonderlogo {
+    display: none;
+  }
+
+  .float-right {
+    display: none;
+  }
+
+  .topartikel {
+    display: none;
+  }
+
+  hr {
+    display: none;
+  }
+
+  .artikelen {
+    font-size: 1.5em;
+    margin-left: 40px;
+  }
+
+  .grid-item {
+    width: 100%;
+    font-size: .8em;
+  }
+
+  .jaargangs {
+    margin-left: 40px;
+  }
+  .jaargang {
+    width: 100%;
+    float: none;
+    overflow: hidden;
+  }
+
+  .jaargang img {
+    width: 250px;
+    height: 200px; }
+
+  .jaargang h3 {
+    font-family: "Lora", serif;
+    font-style: italic;
+    padding-bottom: 5px; }
+
+  .jaargang p {
+    padding-bottom: 5px; }
+
+  .jaargang a {
+    text-decoration: none;
+    color: black;
+    font-family: sans-serif; }
+
+
+    .footer {
+      height: 475px;
+    }
+
+    .footer img {
+      width: 30px;
+    }
+
+    .sections {
+      width: 100%;
+      float: none;
+      text-align: center;
+    }
+
+    .midden {
+      display: none;
+    }
+
+    .links p {
+      display: none;
+    }
+
+    .rechts {
+      margin-top: 50px;
+    }
+
+}
