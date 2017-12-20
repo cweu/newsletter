@@ -93,7 +93,7 @@
 <div class="jaargangs">
   <?php
     $params = array(
-      'limit' => 10,
+      'limit' => 3,
       'orderby' => 'datum DESC'
     );
     $nieuwsbrief = pods('nieuwsbrief', $params);

@@ -1,4 +1,9 @@
 @import url("https://fonts.googleapis.com/css?family=Lora:400,400i,700i|Playfair+Display:400,900,900i,700i,700");
+@font-face {
+    font-family: Avenir;
+    src: url("../fonts/Avenir_Roman.otf") format("opentype");
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -52,7 +57,7 @@ body{
   margin-right: 5%;
   margin-top: 10px !important;
   font-size: 12px;
-  font-family: 'AVENIR', serif;
+  font-family: 'Avenir', serif;
 }
 
 .body .content small::before {
@@ -83,6 +88,10 @@ body{
   margin-bottom: 30px;
   margin-top: 20px; }
 
+.body .content p h3 {
+  margin-top: 20px;
+}
+
 .body .content h1 {
   padding-top: 40px;
   margin-right: 25%;
@@ -93,6 +102,11 @@ body{
 
 .body .m-left h1, .body .m-left h2, .body .m-left h3, .body .m-left h4, .body .m-left h5, .body .m-left h6 {
   margin-left: 5%; }
+
+  .body .m-left h1, .body .m-left h2, .body .m-left h3, .body .m-left h4, .body .m-left h5 {
+  margin-left: 5%;
+  margin-top: 10px;
+}
 
 .body .content p h2,.body .content p h3,.body .content p h4,.body .content p h5,.body .content p h6 {
   font-weight: bold;
@@ -159,7 +173,11 @@ p.bio {
   display: inline-block;
   height: 40px;
   width: 40px;
-  margin-left: 5%; }
+  margin-left: 10px;
+}
+.icons a:first-child {
+  margin-left: 4%;
+}
 
 .icons {
   margin-top: 10px;
@@ -305,14 +323,15 @@ footer .midden li a {
   text-decoration: none;
   color: black;
   height: 20px;
-  padding-left: 30px;
+  margin-left: 30px;
   font-family: sans-serif;
   text-transform: uppercase;
   z-index: 1;
-  transition: 1s;
+  -webkit-transition: .1s;
+  transition: .1s;
 }
 
-.navigatie li:hover {
+.navigatie li a:hover {
   border-bottom: 2px solid #D8D5FC;
 }
 
@@ -681,7 +700,68 @@ h2, h3, h4, h5, h6 {
   .archief .content p {
     font-size: 20px; }
   .archief .content .archief_list .archief_list_item .overlay button {
-    left: -2%; } }
+    left: -2%; }
+}
+
+@media only screen and (max-width: 1000px){
+  .float-right{
+    float: none!important;
+    margin-top: 10px!important;
+  }
+  .navigatie ul li a{
+    margin-left: 15px;
+  }
+
+  .topartikel{
+    width: 100%;
+    float: none;
+  }
+/*
+  .topartikel img{
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
+  }*/
+
+  .grid-sizer, .grid-item{
+    width: 100%;
+  }
+
+  .grid-item{
+    margin-bottom: 15px;
+  }
+
+  .grid-item p{
+    max-width: 100%;
+  }
+
+  .container{
+    padding: 0 25px;
+  }
+
+  .container a{
+    text-decoration: none;
+  }
+
+  .jaargang{
+    width: 100%;
+    float: none;
+  }
+
+  .sections{
+    width: 100%;
+    float: none;
+  }
+
+  .footer{
+    height: 100%;
+  }
+
+  .links, .midden, .rechts{
+    padding-left: 25px;
+    margin-bottom: 25px;
+  }
+}
+
 
 
 

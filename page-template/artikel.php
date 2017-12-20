@@ -44,7 +44,7 @@
     <!-- START CONTENT -->
     <div class="content artikel">
         <h1><?php echo $title; ?></h1> <!-- FIRST HEADER -->
-        <small><?php echo $auteur; ?>, <?php echo date("d-m-Y", strtotime($datum)); ?><?php if($jaargang_nummer != '0.00' && $jaargang_nummer != ''){ echo ', ISSUE NR. ' . $jaargang_nummer;} ?></small>
+        <small><?php echo $auteur; ?>, <?php echo date("d-m-Y", strtotime($datum)); ?><?php if($jaargang_nummer != '0.00' && $jaargang_nummer != ''){ echo ', JAARGANG NR. ' . $jaargang_nummer;} ?></small>
         <p class="intro"> <!-- TEXT -->
             <?php echo $intro; ?>
         </p>

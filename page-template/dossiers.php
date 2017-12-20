@@ -49,7 +49,7 @@ if(isset($_GET['f']) && !empty($_GET['f'])){
     <?php
       if($filter != ''){
         $params = array(
-          'limit' => 1,
+          'limit' => 15,
           'orderby' => 'datum DESC',
           'where' => "category.name = '$filter'"
         );

@@ -15,7 +15,7 @@
     <div class="links">
       <h2>Aanmelden Nieuwsbrief</h2>
       <p>Wilt u zich aanmelden voor deze nieuwbrief?<br> Stuur ons hieronder uw emailadres.</p>
-      <input type="text" name="email" value="" placeholder="   E-MAIL"></br>
+      <input type="text" name="email" value="" placeholder="E-MAIL" style="font-size: 1.1em; padding: 0px 10px;"></br>
       <button type="button" name="button">AANMELDEN</button>
     </div>
   </div>
