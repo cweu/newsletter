@@ -82,7 +82,6 @@ function cwa_newsletter_setup() {
 	add_theme_support( 'post-thumbnails' );
 	set_post_thumbnail_size( 1200, 9999 );
 
-	// This theme uses wp_nav_menu() in two locations.
 	register_nav_menus( array(
 		'primary' => __( 'Primary Menu', 'cwa_newsletter' ),
 		'social'  => __( 'Social Links Menu', 'cwa_newsletter' ),

@@ -802,10 +802,6 @@ a:active {
 	font-family: Montserrat, "Helvetica Neue", sans-serif;
 }
 
-.site-footer .main-navigation {
-	margin-bottom: 1.75em;
-}
-
 .main-navigation ul {
 	list-style: none;
 	margin: 0;
@@ -3076,8 +3072,7 @@ p > video {
 	.dropdown-toggle,
 	.main-navigation ul .dropdown-toggle.toggled-on,
 	.menu-toggle,
-	.site-header .social-navigation,
-	.site-footer .main-navigation {
+	.site-header .social-navigation {
 		display: none;
 	}
 
