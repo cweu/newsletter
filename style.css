@@ -35,7 +35,6 @@ Use it to make something cool, have fun, and share what you've learned with othe
  *    11.2 - Posts and pages
  *    11.3 - Post Formats
  *    11.4 - Comments
- *    11.5 - Sidebar
  *    11.6 - Footer
  * 12.0 - Media
  *    12.1 - Captions
@@ -1718,7 +1717,7 @@ blockquote:after,
 	display: block;
 }
 
-.no-sidebar .post-thumbnail img {
+.post-thumbnail img {
 	margin: 0 auto;
 }
 
@@ -2387,16 +2386,6 @@ body.search-no-results .page-header {
 
 
 /**
- * 11.5 - Sidebar
- */
-
-.sidebar {
-	margin-bottom: 3.5em;
-	padding: 0 7.6923%;
-}
-
-
-/**
  * 11.6 - Footer
  */
 
@@ -2926,7 +2915,6 @@ p > video {
 		margin-bottom: 5.25em;
 	}
 
-	.sidebar,
 	.widecolumn {
 		margin-bottom: 5.25em;
 		padding-right: 23.0769%;
@@ -3127,13 +3115,6 @@ p > video {
 	.content-bottom-widgets {
 		margin-right: 0;
 		margin-left: 0;
-	}
-
-	.sidebar {
-		float: left;
-		margin-left: 75%;
-		padding: 0;
-		width: 25%;
 	}
 
 	.widget {
@@ -3364,23 +3345,23 @@ p > video {
 		order: 1;
 	}
 
-	.no-sidebar .content-area {
+	.content-area {
 		float: none;
 		margin: 0;
 		width: 100%;
 	}
 
-	.no-sidebar .entry-header,
-	.no-sidebar .entry-content,
-	.no-sidebar .entry-summary,
-	.no-sidebar .entry-footer,
-	.no-sidebar .comments-area,
-	.no-sidebar .image-navigation,
-	.no-sidebar .post-navigation,
-	.no-sidebar .pagination,
-	.no-sidebar .page-header,
-	.no-sidebar .page-content,
-	.no-sidebar .content-bottom-widgets {
+	.entry-header,
+	.entry-content,
+	.entry-summary,
+	.entry-footer,
+	.comments-area,
+	.image-navigation,
+	.post-navigation,
+	.pagination,
+	.page-header,
+	.page-content,
+	.content-bottom-widgets {
 		margin-right: 15%;
 		margin-left: 15%;
 	}
@@ -3526,7 +3507,6 @@ p > video {
 	}
 
 	.comments-area,
-	.sidebar,
 	.content-bottom-widgets .widget-area,
 	.widecolumn {
 		margin-bottom: 7.0em;
@@ -3602,14 +3582,14 @@ p > video {
 		width: 49px;
 	}
 
-	body.no-sidebar:not(.search-results) article:not(.type-page) .entry-content {
+	body:not(.search-results) article:not(.type-page) .entry-content {
 		float: left;
 		margin-right: -100%;
 		margin-left: 34.99999999%;
 		width: 50.00000001%;
 	}
 
-	body.no-sidebar:not(.search-results) article:not(.type-page) .entry-footer {
+	body:not(.search-results) article:not(.type-page) .entry-footer {
 		margin-right: -100%;
 		margin-left: 15%;
 		width: 15%;
@@ -3753,7 +3733,6 @@ p > video {
 	.navigation,
 	.main-navigation,
 	.social-navigation,
-	.sidebar,
 	.content-bottom-widgets,
 	.header-image,
 	.page-links,

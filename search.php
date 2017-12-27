@@ -49,5 +49,4 @@ get_header(); ?>
 		</main><!-- .site-main -->
 	</section><!-- .content-area -->
 
-<?php get_sidebar(); ?>
 <?php get_footer(); ?>

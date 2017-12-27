@@ -494,7 +494,6 @@ body:not(.search-results) .entry-summary .alignleft {
 		padding-left: 0;
 	}
 
-	.sidebar,
 	.widecolumn {
 		padding-right: 7.6923%;
 		padding-left: 23.0769%;
@@ -599,13 +598,6 @@ body:not(.search-results) .entry-summary .alignleft {
 		margin-left: 0;
 	}
 
-	.sidebar {
-		float: right;
-		margin-right: 75%;
-		margin-left: auto;
-		padding: 0;
-	}
-
 	.widget blockquote {
 		padding-right: 1.0625em;
 		padding-left: 0;
@@ -639,22 +631,22 @@ body:not(.search-results) .entry-summary .alignleft {
 		margin: 0.538461538em 0 0.538461538em auto;
 	}
 
-	.no-sidebar .entry-header,
-	.no-sidebar .entry-content,
-	.no-sidebar .entry-summary,
-	.no-sidebar .entry-footer,
-	.no-sidebar .comments-area,
-	.no-sidebar .image-navigation,
-	.no-sidebar .post-navigation,
-	.no-sidebar .pagination,
-	.no-sidebar .page-header,
-	.no-sidebar .page-content,
-	.no-sidebar .content-bottom-widgets {
+	.entry-header,
+	.entry-content,
+	.entry-summary,
+	.entry-footer,
+	.comments-area,
+	.image-navigation,
+	.post-navigation,
+	.pagination,
+	.page-header,
+	.page-content,
+	.content-bottom-widgets {
 		margin-right: 15%;
 		margin-left: 15%;
 	}
 
-	.no-sidebar .post-thumbnail {
+	.post-thumbnail {
 		margin-right: 0;
 		margin-left: 0;
 	}
@@ -699,13 +691,13 @@ body:not(.search-results) .entry-summary .alignleft {
 		float: right;
 	}
 
-	body.no-sidebar:not(.search-results) article:not(.type-page) .entry-content {
+	body:not(.search-results) article:not(.type-page) .entry-content {
 		float: right;
 		margin-right: 34.99999999%;
 		margin-left: -100%;
 	}
 
-	body.no-sidebar:not(.search-results) article:not(.type-page) .entry-footer {
+	body:not(.search-results) article:not(.type-page) .entry-footer {
 		margin-right: 15%;
 		margin-left: -100%;
 	}
