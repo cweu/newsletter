@@ -9,9 +9,9 @@
  *
  * @link http://codex.wordpress.org/Template_Hierarchy
  *
- * @package WordPress
- * @subpackage Twenty_Sixteen
- * @since Twenty Sixteen 1.0
+ * @package CWA
+ * @subpackage Newsletter
+ * @since CWA Newsletter 0.1
  */
 
 get_header(); ?>
@@ -43,9 +43,9 @@ get_header(); ?>
 
 			// Previous/next page navigation.
 			the_posts_pagination( array(
-				'prev_text'          => __( 'Previous page', 'twentysixteen' ),
-				'next_text'          => __( 'Next page', 'twentysixteen' ),
-				'before_page_number' => '<span class="meta-nav screen-reader-text">' . __( 'Page', 'twentysixteen' ) . ' </span>',
+				'prev_text'          => __( 'Previous page', 'cwa_newsletter' ),
+				'next_text'          => __( 'Next page', 'cwa_newsletter' ),
+				'before_page_number' => '<span class="meta-nav screen-reader-text">' . __( 'Page', 'cwa_newsletter' ) . ' </span>',
 			) );
 
 		// If no content, include the "No posts found" template.

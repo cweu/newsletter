@@ -5,9 +5,9 @@
  * The area of the page that contains both current comments
  * and the comment form.
  *
- * @package WordPress
- * @subpackage Twenty_Sixteen
- * @since Twenty Sixteen 1.0
+ * @package CWA
+ * @subpackage Newsletter
+ * @since CWA Newsletter 0.1
  */
 
 /*
@@ -28,7 +28,7 @@ if ( post_password_required() ) {
 				$comments_number = get_comments_number();
 				if ( 1 === $comments_number ) {
 					/* translators: %s: post title */
-					printf( _x( 'One thought on &ldquo;%s&rdquo;', 'comments title', 'twentysixteen' ), get_the_title() );
+					printf( _x( 'One thought on &ldquo;%s&rdquo;', 'comments title', 'cwa_newsletter' ), get_the_title() );
 				} else {
 					printf(
 						/* translators: 1: number of comments, 2: post title */
@@ -37,7 +37,7 @@ if ( post_password_required() ) {
 							'%1$s thoughts on &ldquo;%2$s&rdquo;',
 							$comments_number,
 							'comments title',
-							'twentysixteen'
+							'cwa_newsletter'
 						),
 						number_format_i18n( $comments_number ),
 						get_the_title()
@@ -66,7 +66,7 @@ if ( post_password_required() ) {
 		// If comments are closed and there are comments, let's leave a little note, shall we?
 		if ( ! comments_open() && get_comments_number() && post_type_supports( get_post_type(), 'comments' ) ) :
 	?>
-		<p class="no-comments"><?php _e( 'Comments are closed.', 'twentysixteen' ); ?></p>
+		<p class="no-comments"><?php _e( 'Comments are closed.', 'cwa_newsletter' ); ?></p>
 	<?php endif; ?>
 
 	<?php

@@ -1,9 +1,9 @@
 /**
- * Twenty Sixteen keyboard support for image navigation.
+ * CWA Newsletter keyboard support for image navigation.
  */
 
 ( function( $ ) {
-	$( document ).on( 'keydown.twentysixteen', function( e ) {
+	$( document ).on( 'keydown.cwa_newsletter', function( e ) {
 		var url = false;
 
 		// Left arrow key code.
