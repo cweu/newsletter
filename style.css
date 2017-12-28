@@ -300,10 +300,8 @@ button,
 input,
 select,
 textarea {
-	color: #1a1a1a;
-	font-family: Merriweather, Georgia, serif;
-	font-size: 16px;
-	font-size: 1rem;
+	font-family: Lora, Georgia, serif;
+	font-size: 20px;
 	line-height: 1.75;
 }
 
@@ -320,7 +318,7 @@ h6 {
 }
 
 p {
-	margin: 0 0 1.75em;
+	margin: 0 0 1.5em;
 }
 
 dfn,
@@ -335,7 +333,6 @@ blockquote {
 	border-left-width: 4px;
 	color: #686868;
 	font-size: 19px;
-	font-size: 1.1875rem;
 	font-style: italic;
 	line-height: 1.4736842105;
 	margin: 0 0 1.4736842105em;
@@ -364,7 +361,6 @@ blockquote small {
 	color: #1a1a1a;
 	display: block;
 	font-size: 16px;
-	font-size: 1rem;
 	line-height: 1.75;
 }
 
@@ -399,13 +395,12 @@ tt,
 var,
 samp,
 pre {
-	font-family: Inconsolata, monospace;
+	font-family: monospace; /* @todo pick a monospace font */
 }
 
 pre {
 	border: 1px solid #d1d1d1;
 	font-size: 16px;
-	font-size: 1rem;
 	line-height: 1.3125;
 	margin: 0 0 1.75em;
 	max-width: 100%;
@@ -471,7 +466,7 @@ hr {
 	margin: 0 0 1.75em;
 }
 
-ul,
+/*ul,
 ol {
 	margin: 0 0 1.75em 1.25em;
 	padding: 0;
@@ -484,7 +479,7 @@ ul {
 ol {
 	list-style: decimal;
 	margin-left: 1.5em;
-}
+}*/
 
 li > ul,
 li > ol {
@@ -677,7 +672,6 @@ textarea:focus {
 	display: block;
 	font-family: Montserrat, "Helvetica Neue", sans-serif;
 	font-size: 13px;
-	font-size: 0.8125rem;
 	letter-spacing: 0.076923077em;
 	line-height: 1.6153846154;
 	margin-bottom: 1.75em;
@@ -799,7 +793,9 @@ a:active {
 }
 
 .main-navigation {
-	font-family: Montserrat, "Helvetica Neue", sans-serif;
+	font-family: Lato, Helvetica, sans-serif;
+	font-size: 20px;
+	text-transform: uppercase;
 }
 
 .main-navigation ul {
@@ -1066,7 +1062,6 @@ a:active {
 .post-navigation .meta-nav {
 	color: #686868;
 	font-size: 13px;
-	font-size: 0.8125rem;
 	letter-spacing: 0.076923077em;
 	line-height: 1.6153846154;
 	margin-bottom: 0.5384615385em;
@@ -1077,7 +1072,6 @@ a:active {
 	display: inline;
 	font-family: Montserrat, "Helvetica Neue", sans-serif;
 	font-size: 23px;
-	font-size: 1.4375rem;
 	font-weight: 700;
 	line-height: 1.2173913043;
 	text-rendering: optimizeLegibility;
@@ -1096,7 +1090,6 @@ a:active {
 	border-top: 4px solid #1a1a1a;
 	font-family: Montserrat, "Helvetica Neue", sans-serif;
 	font-size: 19px;
-	font-size: 1.1875rem;
 	margin: 0 7.6923% 2.947368421em;
 	min-height: 56px;
 	position: relative;
@@ -1235,7 +1228,6 @@ a:active {
 	color: #686868;
 	font-family: Montserrat, "Helvetica Neue", sans-serif;
 	font-size: 13px;
-	font-size: 0.8125rem;
 	line-height: 1.6153846154;
 	margin: 0 7.6923% 2.1538461538em;
 	padding: 1.0769230769em 0;
@@ -1411,7 +1403,6 @@ blockquote:after,
 .widget .widget-title {
 	font-family: Montserrat, "Helvetica Neue", sans-serif;
 	font-size: 16px;
-	font-size: 1rem;
 	letter-spacing: 0.046875em;
 	line-height: 1.3125;
 	margin: 0 0 1.75em;
@@ -1462,7 +1453,6 @@ blockquote:after,
 	display: block;
 	font-family: Montserrat, "Helvetica Neue", sans-serif;
 	font-size: 13px;
-	font-size: 0.8125rem;
 	line-height: 1.615384615;
 	margin-bottom: 0.538461538em;
 }
@@ -1482,7 +1472,6 @@ blockquote:after,
 	display: block;
 	font-family: Montserrat, "Helvetica Neue", sans-serif;
 	font-size: 13px;
-	font-size: 0.8125rem;
 	font-style: normal;
 	line-height: 1.615384615;
 	margin-bottom: 0.538461538em;
@@ -1552,7 +1541,7 @@ blockquote:after,
  */
 
 .site-header {
-	padding: 2.625em 7.6923%;
+	padding: 2em 7.6923%;
 }
 
 .site-header-main {
@@ -1568,7 +1557,7 @@ blockquote:after,
 }
 
 .site-branding {
-	margin: 0.875em auto 0.875em 0;
+	margin: 0 auto 0.875em 0;
 	/* Avoid overflowing wide custom logo in small screens in Firefox and IEs */
 	max-width: 100%;
 	min-width: 0;
@@ -1584,11 +1573,10 @@ blockquote:after,
 }
 
 .site-title {
-	font-family: Montserrat, "Helvetica Neue", sans-serif;
-	font-size: 23px;
-	font-size: 1.4375rem;
-	font-weight: 700;
-	line-height: 1.2173913043;
+	font-family: "Playfair Display", Georgia, serif;
+	font-size: 35px;
+	font-weight: 900;
+	line-height: 0.82;
 	margin: 0;
 }
 
@@ -1601,15 +1589,9 @@ blockquote:after,
 	color: #007acc;
 }
 
-.wp-custom-logo .site-title {
-	margin-top: 0.608695652em;
-}
-
 .site-description {
-	color: #686868;
 	display: none;
-	font-size: 13px;
-	font-size: 0.8125rem;
+	font-size: 15px;
 	font-weight: 400;
 	line-height: 1.0769230769;
 	margin: 0.538461538em 0 0;
@@ -1620,7 +1602,6 @@ blockquote:after,
 	border: 1px solid #d1d1d1;
 	color: #1a1a1a;
 	font-size: 13px;
-	font-size: 0.8125rem;
 	margin: 1.076923077em 0;
 	padding: 0.769230769em;
 }
@@ -1685,12 +1666,11 @@ blockquote:after,
 }
 
 .entry-title {
-	font-family: Montserrat, "Helvetica Neue", sans-serif;
-	font-size: 28px;
-	font-size: 1.75rem;
+	font-family: "Playfair Display", Georgia, serif;
+	font-size: 50px;
 	font-weight: 700;
 	line-height: 1.25;
-	margin-bottom: 1em;
+	margin-bottom: 0.5em;
 }
 
 .entry-title a {
@@ -1729,10 +1709,9 @@ a.post-thumbnail:focus {
 .entry-summary h1,
 .comment-content h1,
 .textwidget h1 {
-	font-size: 28px;
-	font-size: 1.75rem;
+	font-size: 50px;
+	font-weight: 700;
 	line-height: 1.25;
-	margin-top: 2em;
 	margin-bottom: 1em;
 }
 
@@ -1740,22 +1719,22 @@ a.post-thumbnail:focus {
 .entry-summary h2,
 .comment-content h2,
 .textwidget h2 {
-	font-size: 23px;
-	font-size: 1.4375rem;
+	font-size: 30px;
+	font-weight: 400;
+	font-style: italic;
 	line-height: 1.2173913043;
-	margin-top: 2.4347826087em;
-	margin-bottom: 1.2173913043em;
+	margin-bottom: 0.2em;
 }
 
 .entry-content h3,
 .entry-summary h3,
 .comment-content h3,
 .textwidget h3 {
-	font-size: 19px;
-	font-size: 1.1875rem;
+	font-size: 25px;
+	font-weight: 600;
+	font-style: italic;
 	line-height: 1.1052631579;
-	margin-top: 2.9473684211em;
-	margin-bottom: 1.4736842105em;
+	margin-bottom: 0.2em;
 }
 
 .entry-content h4,
@@ -1771,10 +1750,9 @@ a.post-thumbnail:focus {
 .textwidget h5,
 .textwidget h6 {
 	font-size: 16px;
-	font-size: 1rem;
 	line-height: 1.3125;
 	margin-top: 3.5em;
-	margin-bottom: 1.75em;
+	margin-bottom: 0.2em;
 }
 
 .entry-content h4,
@@ -1858,7 +1836,6 @@ a.post-thumbnail:focus {
 body:not(.search-results) .entry-summary {
 	color: #686868;
 	font-size: 19px;
-	font-size: 1.1875rem;
 	line-height: 1.4736842105;
 	margin-bottom: 1.4736842105em;
 }
@@ -1949,7 +1926,6 @@ body:not(.search-results) .entry-summary > :last-child,
 .entry-content .author-title {
 	clear: none;
 	font-size: 16px;
-	font-size: 1rem;
 	font-weight: 900;
 	line-height: 1.75;
 	margin: 0;
@@ -1958,7 +1934,6 @@ body:not(.search-results) .entry-summary > :last-child,
 .author-bio {
 	color: #686868;
 	font-size: 13px;
-	font-size: 0.8125rem;
 	line-height: 1.6153846154;
 	margin-bottom: 1.6153846154em;
 	overflow: hidden;
@@ -1972,7 +1947,6 @@ body:not(.search-results) .entry-summary > :last-child,
 	color: #686868;
 	font-family: Montserrat, "Helvetica Neue", sans-serif;
 	font-size: 13px;
-	font-size: 0.8125rem;
 	line-height: 1.6153846154;
 	margin-top: 2.1538461538em;
 }
@@ -2008,7 +1982,6 @@ body:not(.search-results) .entry-summary > :last-child,
 	display: block;
 	font-family: Montserrat, "Helvetica Neue", sans-serif;
 	font-size: 13px;
-	font-size: 0.8125rem;
 	letter-spacing: 0.076923077em;
 	line-height: 1.6153846154;
 	margin-bottom: 0.5384615385em;
@@ -2048,14 +2021,12 @@ body.search-no-results .page-header {
 .page-title {
 	font-family: Montserrat, "Helvetica Neue", sans-serif;
 	font-size: 23px;
-	font-size: 1.4375rem;
 	line-height: 1.2173913043;
 }
 
 .taxonomy-description {
 	color: #686868;
 	font-size: 13px;
-	font-size: 0.8125rem;
 	line-height: 1.6153846154;
 }
 
@@ -2079,7 +2050,6 @@ body.search-no-results .page-header {
 	border-radius: 2px;
 	display: inline-block;
 	font-size: 13px;
-	font-size: 0.8125rem;
 	height: 1.8461538462em;
 	line-height: 1.6923076923em;
 	margin-right: 0.3076923077em;
@@ -2116,7 +2086,6 @@ body.search-no-results .page-header {
 .entry-caption {
 	color: #686868;
 	font-size: 13px;
-	font-size: 0.8125rem;
 	font-style: italic;
 	line-height: 1.6153846154;
 	padding-top: 1.0769230769em;
@@ -2149,7 +2118,6 @@ body.search-no-results .page-header {
 .format-audio .entry-title,
 .format-chat .entry-title {
 	font-size: 19px;
-	font-size: 1.1875rem;
 	line-height: 1.473684211;
 	margin-bottom: 1.473684211em;
 }
@@ -2178,7 +2146,6 @@ body.search-no-results .page-header {
 	border-top: 4px solid #1a1a1a;
 	font-family: Montserrat, "Helvetica Neue", sans-serif;
 	font-size: 23px;
-	font-size: 1.4375rem;
 	font-weight: 700;
 	line-height: 1.3125;
 	padding-top: 1.217391304em;
@@ -2234,7 +2201,6 @@ body.search-no-results .page-header {
 	color: #686868;
 	font-family: Montserrat, "Helvetica Neue", sans-serif;
 	font-size: 13px;
-	font-size: 0.8125rem;
 	line-height: 1.6153846154;
 }
 
@@ -2284,7 +2250,6 @@ body.search-no-results .page-header {
 	display: inline-block;
 	font-family: Montserrat, "Helvetica Neue", sans-serif;
 	font-size: 13px;
-	font-size: 0.8125rem;
 	line-height: 1;
 	margin-top: 2.1538461538em;
 	padding: 0.5384615385em 0.5384615385em 0.4615384615em;
@@ -2306,7 +2271,6 @@ body.search-no-results .page-header {
 	display: block;
 	font-family: Montserrat, "Helvetica Neue", sans-serif;
 	font-size: 13px;
-	font-size: 0.8125rem;
 	letter-spacing: 0.076923077em;
 	line-height: 1.6153846154;
 	margin-bottom: 0.5384615385em;
@@ -2323,7 +2287,6 @@ body.search-no-results .page-header {
 .form-allowed-tags {
 	color: #686868;
 	font-size: 13px;
-	font-size: 0.8125rem;
 	line-height: 1.6153846154;
 	margin-bottom: 2.1538461538em;
 }
@@ -2390,7 +2353,6 @@ body.search-no-results .page-header {
 .site-info {
 	color: #686868;
 	font-size: 13px;
-	font-size: 0.8125rem;
 	line-height: 1.6153846154;
 }
 
@@ -2499,7 +2461,6 @@ p > video {
 .wp-caption .wp-caption-text {
 	color: #686868;
 	font-size: 13px;
-	font-size: 0.8125rem;
 	font-style: italic;
 	line-height: 1.6153846154;
 	padding-top: 0.5384615385em;
@@ -2563,7 +2524,6 @@ p > video {
 	color: #686868;
 	display: block;
 	font-size: 13px;
-	font-size: 0.8125rem;
 	font-style: italic;
 	line-height: 1.6153846154;
 	padding-top: 0.5384615385em;
@@ -2605,7 +2565,6 @@ p > video {
 
 .widecolumn h2 {
 	font-size: 23px;
-	font-size: 1.4375rem;
 	font-weight: 900;
 	line-height: 1.2173913043;
 	margin-bottom: 1.2173913043em;
@@ -2624,7 +2583,6 @@ p > video {
 	color: #686868;
 	font-family: Montserrat, "Helvetica Neue", sans-serif;
 	font-size: 13px;
-	font-size: 0.8125rem;
 	font-weight: 400;
 	letter-spacing: 0.076923077em;
 	line-height: 1.6153846154;
@@ -2645,7 +2603,6 @@ p > video {
 .widecolumn .mu_register #blogname,
 .widecolumn .mu_register #user_name {
 	font-size: 16px;
-	font-size: 1rem;
 	width: 100%;
 }
 
@@ -2662,7 +2619,6 @@ p > video {
 .widecolumn #submit,
 .widecolumn .mu_register input[type="submit"] {
 	font-size: 16px;
-	font-size: 1rem;
 	margin: 0;
 	width: auto;
 }
@@ -2702,32 +2658,8 @@ p > video {
  */
 
 @media screen and (min-width: 44.375em) {
-	body:not(.custom-background-image):before,
-	body:not(.custom-background-image):after {
-		background: inherit;
-		content: "";
-		display: block;
-		height: 21px;
-		left: 0;
-		position: fixed;
-		width: 100%;
-		z-index: 99;
-	}
-
-	body:not(.custom-background-image):before {
-		top: 0;
-	}
-
-	body:not(.custom-background-image).admin-bar:before {
-		top: 46px;
-	}
-
-	body:not(.custom-background-image):after {
-		bottom: 0;
-	}
 
 	.site {
-		margin: 21px;
 	}
 
 	.site-main {
@@ -2735,7 +2667,7 @@ p > video {
 	}
 
 	.site-header {
-		padding: 3.9375em 7.6923%;
+		padding: 2em 7.6923%;
 	}
 
 	.site-branding {
@@ -2748,8 +2680,7 @@ p > video {
 	}
 
 	.site-title {
-		font-size: 28px;
-		font-size: 1.75rem;
+		font-size: 40px;
 		line-height: 1.25;
 	}
 
@@ -2763,7 +2694,6 @@ p > video {
 
 	.menu-toggle {
 		font-size: 16px;
-		font-size: 1.0rem;
 		margin: 1.3125em 0;
 		padding: 0.8125em 0.875em 0.6875em;
 	}
@@ -2790,7 +2720,6 @@ p > video {
 
 	.post-navigation .post-title {
 		font-size: 28px;
-		font-size: 1.75rem;
 		line-height: 1.25;
 	}
 
@@ -2821,12 +2750,11 @@ p > video {
 		margin-right: 23.0769%;
 	}
 
-	.entry-title {
+	/*.entry-title {
 		font-size: 33px;
-		font-size: 2.0625rem;
 		line-height: 1.2727272727;
 		margin-bottom: 0.8484848485em;
-	}
+	}*/
 
 	.entry-content blockquote.alignleft,
 	.entry-content blockquote.alignright {
@@ -2923,9 +2851,6 @@ p > video {
  */
 
 @media screen and (min-width: 48.9375em) {
-	body:not(.custom-background-image).admin-bar:before {
-		top: 32px;
-	}
 }
 
 
@@ -3104,7 +3029,6 @@ p > video {
 
 	.widget {
 		font-size: 13px;
-		font-size: 0.8125rem;
 		line-height: 1.6153846154;
 		margin-bottom: 3.230769231em;
 		padding-top: 1.615384615em;
@@ -3132,7 +3056,6 @@ p > video {
 
 	.widget blockquote {
 		font-size: 16px;
-		font-size: 1rem;
 		line-height: 1.3125;
 		margin-bottom: 1.3125em;
 		padding-left: 1.0625em;
@@ -3141,7 +3064,6 @@ p > video {
 	.widget blockquote cite,
 	.widget blockquote small {
 		font-size: 13px;
-		font-size: 0.8125rem;
 		line-height: 1.6153846154;
 	}
 
@@ -3152,7 +3074,6 @@ p > video {
 
 	.widget pre {
 		font-size: 13px;
-		font-size: 0.8125rem;
 		line-height: 1.6153846154;
 		margin-bottom: 1.6153846154em;
 		padding: 0.5384615385em;
@@ -3168,7 +3089,6 @@ p > video {
 	.widget select,
 	.widget textarea {
 		font-size: 13px;
-		font-size: 0.8125rem;
 		line-height: 1.6153846154;
 	}
 
@@ -3198,21 +3118,18 @@ p > video {
 
 	.widget h1 {
 		font-size: 23px;
-		font-size: 1.4375rem;
 		line-height: 1.2173913043;
 		margin-bottom: 0.9130434783em;
 	}
 
 	.widget h2 {
 		font-size: 19px;
-		font-size: 1.1875rem;
 		line-height: 1.1052631579;
 		margin-bottom: 1.1052631579em;
 	}
 
 	.widget h3 {
 		font-size: 16px;
-		font-size: 1rem;
 		line-height: 1.3125;
 		margin-bottom: 1.3125em;
 	}
@@ -3221,7 +3138,6 @@ p > video {
 	.widget h5,
 	.widget h6 {
 		font-size: 13px;
-		font-size: 0.8125rem;
 		line-height: 1.6153846154;
 		margin-bottom: 0.9130434783em;
 	}
@@ -3313,7 +3229,7 @@ p > video {
 		-webkit-flex-wrap: wrap;
 		-ms-flex-wrap: wrap;
 		flex-wrap: wrap;
-		padding: 0 4.5455% 3.5em;
+		padding: 0 4.5455% 1.5em;
 	}
 
 	.site-footer .social-navigation {
@@ -3368,13 +3284,13 @@ p > video {
 	}
 
 	.site-header {
-		padding: 5.25em 4.5455%;
+		padding: 3em 4.5455%;
 	}
 
 	.site-branding,
 	.site-header-menu,
 	.header-image {
-		margin-top: 1.75em;
+		margin-top: 0;
 		margin-bottom: 1.75em;
 	}
 
@@ -3404,7 +3320,6 @@ p > video {
 
 	.entry-title {
 		font-size: 40px;
-		font-size: 2.5rem;
 		line-height: 1.225;
 		margin-bottom: 1.05em;
 	}
@@ -3427,12 +3342,11 @@ p > video {
 	.post-thumbnail {
 		margin-bottom: 2.625em;
 	}
-
+/*
 	.entry-content h1,
 	.entry-summary h1,
 	.comment-content h1 {
 		font-size: 33px;
-		font-size: 2.0625rem;
 		line-height: 1.2727272727;
 		margin-top: 1.696969697em;
 		margin-bottom: 0.8484848485em;
@@ -3442,7 +3356,6 @@ p > video {
 	.entry-summary h2,
 	.comment-content h2 {
 		font-size: 28px;
-		font-size: 1.75rem;
 		line-height: 1.25;
 		margin-top: 2em;
 		margin-bottom: 1em;
@@ -3452,7 +3365,6 @@ p > video {
 	.entry-summary h3,
 	.comment-content h3 {
 		font-size: 23px;
-		font-size: 1.4375rem;
 		line-height: 1.2173913043;
 		margin-top: 2.4347826087em;
 		margin-bottom: 1.2173913043em;
@@ -3475,11 +3387,10 @@ p > video {
 	.comment-content h5,
 	.comment-content h6 {
 		font-size: 19px;
-		font-size: 1.1875rem;
 		line-height: 1.1052631579;
 		margin-top: 2.9473684211em;
 		margin-bottom: 1.473684211em;
-	}
+	}*/
 
 	.author-info {
 		border-bottom-width: 0;
@@ -3589,7 +3500,6 @@ p > video {
 @media screen and (min-width: 75em) {
 	body:not(.search-results) .entry-summary {
 		font-size: 23px;
-		font-size: 1.4375rem;
 		line-height: 1.5217391304;
 		margin-bottom: 1.826086957em;
 	}
@@ -3621,7 +3531,6 @@ p > video {
 
 	body:not(.search-results) .entry-summary blockquote {
 		font-size: 23px;
-		font-size: 1.4375rem;
 		line-height: 1.5217391304;
 		margin: 0 0 1.5217391304em;
 		padding-left: 1.347826087em;
@@ -3638,7 +3547,6 @@ p > video {
 	body:not(.search-results) .entry-summary blockquote cite,
 	body:not(.search-results) .entry-summary blockquote small {
 		font-size: 19px;
-		font-size: 1.1875rem;
 		line-height: 1.8421052632;
 	}
 
@@ -3649,7 +3557,6 @@ p > video {
 
 	body:not(.search-results) .entry-summary pre {
 		font-size: 16px;
-		font-size: 1rem;
 		line-height: 1.75;
 		margin-bottom: 1.75em;
 		padding: 1.75em;

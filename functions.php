@@ -187,19 +187,20 @@ function cwa_newsletter_fonts_url() {
 	$fonts     = array();
 	$subsets   = 'latin,latin-ext';
 
-	/* translators: If there are characters in your language that are not supported by Merriweather, translate this to 'off'. Do not translate into your own language. */
-	if ( 'off' !== _x( 'on', 'Merriweather font: on or off', 'cwa_newsletter' ) ) {
-		$fonts[] = 'Merriweather:400,700,900,400italic,700italic,900italic';
+	/* translators: If there are characters in your language that are not supported by Lora, translate this to 'off'. Do not translate into your own language. */
+	if ( 'off' !== _x( 'on', 'Lora font: on or off', 'cwa_newsletter' ) ) {
+		$fonts[] = 'Lora:400,700,400italic,700italic';
 	}
 
-	/* translators: If there are characters in your language that are not supported by Montserrat, translate this to 'off'. Do not translate into your own language. */
-	if ( 'off' !== _x( 'on', 'Montserrat font: on or off', 'cwa_newsletter' ) ) {
-		$fonts[] = 'Montserrat:400,700';
+	/* translators: If there are characters in your language that are not supported by Playfair Display, translate this to 'off'. Do not translate into your own language. */
+	if ( 'off' !== _x( 'on', 'Playfair Display font: on or off', 'cwa_newsletter' ) ) {
+		$fonts[] = 'Playfair Display:700,900,700italic';
 	}
 
-	/* translators: If there are characters in your language that are not supported by Inconsolata, translate this to 'off'. Do not translate into your own language. */
-	if ( 'off' !== _x( 'on', 'Inconsolata font: on or off', 'cwa_newsletter' ) ) {
-		$fonts[] = 'Inconsolata:400';
+	/* translators: If there are characters in your language that are not supported by Lato, translate this to 'off'. Do not translate into your own language. */
+	if ( 'off' !== _x( 'on', 'Lato font: on or off', 'cwa_newsletter' ) ) {
+		// Lato instead of Avenir.
+		$fonts[] = 'Lato:400,700'; // @todo pick only weights really used.
 	}
 
 	if ( $fonts ) {
