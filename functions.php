@@ -403,3 +403,22 @@ function cwa_newsletter_widget_tag_cloud_args( $args ) {
 	return $args;
 }
 add_filter( 'widget_tag_cloud_args', 'cwa_newsletter_widget_tag_cloud_args' );
+
+/**
+ * Returns a human-readable version of the year-number combination.
+ *
+ * @since CWA Newsletter 0.1
+ *
+ * @param string $number number Issue number, like 5 or '29.1'.
+ * @return string Human-readable issue name, like 'Jaargang 5' or 'Jaargang 29 nr. 1'.
+ */
+function cwa_newsletter_format_issue_nr( $number ) {
+	if ( $number ) {
+		$parts = explode( '.', $number, 2 );
+		if ( count( $parts ) > 1 ) {
+			return __( 'Jaargang', 'cwa_newsletter' ) . ' ' . $parts[0] . ' ' . __( 'nr.', 'cwa_newsletter' ) . ' ' . $parts[1];
+		} else {
+			return __( 'Jaargang', 'cwa_newsletter' ) . ' ' . $parts[0];
+		}
+	}
+}

@@ -1665,7 +1665,8 @@ blockquote:after,
 	margin-left: 7.6923%;
 }
 
-.entry-title {
+.entry-title,
+.page-title {
 	font-family: "Playfair Display", Georgia, serif;
 	font-size: 50px;
 	font-weight: 700;
@@ -2006,22 +2007,10 @@ body:not(.search-results) .entry-summary > :last-child,
 	display: inline;
 }
 
-.page-header {
-	border-top: 4px solid #1a1a1a;
-	margin: 0 7.6923% 3.5em;
-	padding-top: 1.75em;
-}
-
 body.error404 .page-header,
 body.search-no-results .page-header {
 	border-top: 0;
 	padding-top: 0;
-}
-
-.page-title {
-	font-family: Montserrat, "Helvetica Neue", sans-serif;
-	font-size: 23px;
-	line-height: 1.2173913043;
 }
 
 .taxonomy-description {
@@ -2125,6 +2114,33 @@ body.search-no-results .page-header {
 .blog .format-status .entry-title,
 .archive .format-status .entry-title {
 	display: none;
+}
+
+.archive article.newsletter {
+	display: inline-block;
+	vertical-align: top;
+	margin-bottom: 1em;
+	max-width: 20em;
+}
+
+.archive article.newsletter a {
+	color: inherit;
+}
+
+.newsletter .entry-title {
+	font-family: Lora, Georgia, serif;
+	font-style: italic;
+	font-size: 22px;
+	line-height: 1.1;
+	margin-bottom: 0.2em;
+}
+
+.newsletter .entry-subtitle {
+	line-height: 1.1;
+	font-size: 20px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
 }
 
 
@@ -3318,7 +3334,7 @@ p > video {
 		margin-bottom: 7.0em;
 	}
 
-	.entry-title {
+	.page-title, .entry-title {
 		font-size: 40px;
 		line-height: 1.225;
 		margin-bottom: 1.05em;
@@ -3340,7 +3356,7 @@ p > video {
 	}
 
 	.post-thumbnail {
-		margin-bottom: 2.625em;
+		margin-bottom: 1em;
 	}
 /*
 	.entry-content h1,
