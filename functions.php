@@ -422,3 +422,20 @@ function cwa_newsletter_format_issue_nr( $number ) {
 		}
 	}
 }
+
+/**
+ * Returns a Pod by issue number.
+ *
+ * @since CWA Newsletter 0.1
+ *
+ * @param string $pod_type type Pod type to find, either `newsletter` or `newsletter_article`.
+ * @param string $number number Issue number, like 5 or '29.1'.
+ * @return object Pod, or null if not found.
+ */
+function cwa_newsletter_pod_by_nr( $pod_type, $number ) {
+	$query = array(
+		'where' => 'issue_nr.meta_value = "' . pods_sanitize( $number ) . '"',
+		'limit' => 1,
+	);
+	return pods( $pod_type, $query );
+}
