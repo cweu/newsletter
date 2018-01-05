@@ -327,7 +327,8 @@ require get_template_directory() . '/inc/customizer.php';
 /**
  * Backend admin twaeks.
  */
-require get_template_directory() . '/inc/admin.php';
+require get_template_directory() . '/inc/admin-noblog.php';
+require get_template_directory() . '/inc/admin-columns.php';
 
 /**
  * Add custom image sizes attribute to enhance responsive image functionality

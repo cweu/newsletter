@@ -1,8 +1,8 @@
 <?php
 /**
- * CWA Newsletter backend admin tweaks
+ * CWA Newsletter backend admin tweaks: remove blogging functionality
  *
- * Removing blogging functionality inspired by the disable-blogging plugin by Fact Maven.
+ * Heavily inspired by the disable-blogging plugin by Fact Maven.
  *
  * @package CWA
  * @subpackage Newsletter
