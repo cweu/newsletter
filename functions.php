@@ -100,23 +100,6 @@ function cwa_newsletter_setup() {
 	) );
 
 	/*
-	 * Enable support for Post Formats.
-	 *
-	 * See: https://codex.wordpress.org/Post_Formats
-	 */
-	add_theme_support( 'post-formats', array(
-		'aside',
-		'image',
-		'video',
-		'quote',
-		'link',
-		'gallery',
-		'status',
-		'audio',
-		'chat',
-	) );
-
-	/*
 	 * This theme styles the visual editor to resemble the theme style,
 	 * specifically font, colors, icons, and column width.
 	 */
@@ -340,6 +323,11 @@ require get_template_directory() . '/inc/template-tags.php';
  * Customizer additions.
  */
 require get_template_directory() . '/inc/customizer.php';
+
+/**
+ * Backend admin twaeks.
+ */
+require get_template_directory() . '/inc/admin.php';
 
 /**
  * Add custom image sizes attribute to enhance responsive image functionality
