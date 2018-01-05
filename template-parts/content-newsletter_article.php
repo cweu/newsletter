@@ -1,13 +1,13 @@
 <?php
 /**
- * The template part for displaying newsletters in a listing
+ * The template part for displaying newsletter articles in a listing
  *
  * @package CWA
  * @subpackage Newsletter
  * @since CWA Newsletter 0.1
  */
 
-$pods     = pods( 'newsletter', get_the_ID() );
+$pods     = pods( 'newsletter_article', get_the_ID() );
 $issue_nr = $pods->field( 'issue_nr' );
 ?>
 
@@ -15,12 +15,13 @@ $issue_nr = $pods->field( 'issue_nr' );
 	<a href="<?php echo esc_url( get_permalink() ); ?>" rel="bookmark">
 		<header class="entry-header">
 			<?php if ( is_sticky() && is_home() && ! is_paged() ) : ?>
-				<span class="sticky-post"><?php _e( 'Featured', 'cwa_newsletter' ); ?></span>
+				<span class="sticky-post"><?php __( 'Featured', 'cwa_newsletter' ); ?></span>
 			<?php endif; ?>
 
-			<h2 class="entry-title"><?php echo esc_html( cwa_newsletter_format_issue_nr( $issue_nr ) ); ?></h2>
-			<?php the_title( '<p class="entry-subtitle">', '</p>' ); ?>
+			<h2 class="entry-title"><?php the_title(); ?></h2>
 		</header><!-- .entry-header -->
+
+		<?php cwa_newsletter_excerpt(); ?>
 
 		<?php cwa_newsletter_post_thumbnail( false ); ?>
 	</a>

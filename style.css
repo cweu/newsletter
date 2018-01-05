@@ -1712,6 +1712,11 @@ a.post-thumbnail:focus {
 	opacity: 0.85;
 }
 
+article > a:hover,
+article > a:focus {
+	opacity: 0.85;
+}
+
 .entry-content,
 .entry-summary {
 	border-color: #d1d1d1;
@@ -1856,6 +1861,15 @@ body:not(.search-results) .entry-header + .entry-summary {
 	margin-top: -0.736842105em;
 }
 
+body:not(.search-results) .entry-header + .post-thumbnail {
+	margin-top: -1.1em;
+	margin-bottom: 0;
+}
+
+body:not(.search-results) .entry-summary + .post-thumbnail {
+	margin-top: -1.4736842105em;
+}
+
 body:not(.search-results) .entry-summary p,
 body:not(.search-results) .entry-summary address,
 body:not(.search-results) .entry-summary hr,
@@ -1960,7 +1974,6 @@ body:not(.search-results) .entry-summary > :last-child,
 	font-family: Montserrat, "Helvetica Neue", sans-serif;
 	font-size: 13px;
 	line-height: 1.6153846154;
-	margin-top: 2.1538461538em;
 }
 
 .entry-footer:empty {
@@ -2127,18 +2140,30 @@ body.search-no-results .page-header {
 	display: none;
 }
 
-.archive article.newsletter {
-	display: inline-block;
-	vertical-align: top;
+.archive article.type-newsletter,
+.archive article.type-newsletter_article {
 	margin-bottom: 1em;
-	max-width: 20em;
 }
 
-.archive article.newsletter a {
+.archive article.type-newsletter a,
+.archive article.type-newsletter_article a {
 	color: inherit;
 }
 
-.newsletter .entry-title {
+.archive article.type-newsletter .entry-summary > p,
+.archive article.type-newsletter_article .entry-summary > p {
+	max-height: 20ex;
+	overflow: hidden;
+	/* @todo use clamp.js for ellipsis */
+}
+
+.archive article.type-newsletter_article .post-thumbnail {
+	max-height: 300px;
+	overflow: hidden;
+}
+
+.type-newsletter .entry-title,
+.type-newsletter_article .entry-title {
 	font-family: Lora, Georgia, serif;
 	font-style: italic;
 	font-size: 22px;
@@ -2146,13 +2171,16 @@ body.search-no-results .page-header {
 	margin-bottom: 0.2em;
 }
 
-.newsletter .entry-subtitle {
-	line-height: 1.1;
+.type-newsletter .entry-subtitle,
+.type-newsletter_article .entry-subtitle {
+	line-height: 1.5;
 	font-size: 20px;
 	white-space: nowrap;
 	overflow: hidden;
 	text-overflow: ellipsis;
+	margin-bottom: 0;
 }
+
 
 
 /**
@@ -2783,6 +2811,13 @@ p > video {
 		margin-bottom: 0.8484848485em;
 	}*/
 
+	.archive article.type-newsletter,
+	.archive article.type-newsletter_article {
+		float: left;
+		vertical-align: top;
+		width: 50%;
+	}
+
 	.entry-content blockquote.alignleft,
 	.entry-content blockquote.alignright {
 		border-width: 4px 0 0 0;
@@ -3294,6 +3329,24 @@ p > video {
 		margin-left: 15%;
 	}
 
+	.archive article.type-newsletter .entry-header,
+	.archive article.type-newsletter .entry-content,
+	.archive article.type-newsletter .entry-summary,
+	.archive article.type-newsletter .entry-footer,
+	.archive article.type-newsletter .post-thumbnail {
+		margin-left: 8%;
+		margin-right: 8%;
+	}
+
+	.archive article.type-newsletter_article .entry-header,
+	.archive article.type-newsletter_article .entry-content,
+	.archive article.type-newsletter_article .entry-summary,
+	.archive article.type-newsletter_article .entry-footer,
+	.archive article.type-newsletter_article .post-thumbnail {
+		margin-left: 12%;
+		margin-right: 12%;
+	}
+
 	.widecolumn {
 		padding-right: 15%;
 		padding-left: 15%;
@@ -3446,6 +3499,14 @@ p > video {
 		margin-top: -1.105263158em;
 	}
 
+	body:not(.search-results) .entry-header + .post-thumbnail {
+		margin-top: -1.6em;
+	}
+	body:not(.search-results) .entry-summary + .post-thumbnail {
+		margin-top: -2.210526316em;
+	}
+
+
 	body:not(.search-results) article:not(.type-page) .entry-content > blockquote.alignleft.below-entry-meta {
 		margin-left: -40%;
 		width: -webkit-calc(60% - 1.4736842105em);
@@ -3510,6 +3571,12 @@ p > video {
  */
 
 @media screen and (min-width: 75em) {
+
+	.archive article.type-newsletter,
+	.archive article.type-newsletter_article {
+		width: 33.33%;
+	}
+
 	body:not(.search-results) .entry-summary {
 		font-size: 20px;
 		line-height: 1.5217391304;
@@ -3518,6 +3585,10 @@ p > video {
 
 	body:not(.search-results) .entry-header + .entry-summary {
 		margin-top: -0.913043478em;
+	}
+
+	body:not(.search-results) .entry-summary + .post-thumbnail {
+		margin-top: -1.826086957em;
 	}
 
 	body:not(.search-results) .entry-summary p,
