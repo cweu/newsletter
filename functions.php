@@ -240,6 +240,11 @@ function cwa_newsletter_scripts() {
 	wp_enqueue_script( 'cwa_newsletter-html5', get_template_directory_uri() . '/js/html5.js', array(), '3.7.3' );
 	wp_script_add_data( 'cwa_newsletter-html5', 'conditional', 'lt IE 9' );
 
+	if ( is_home() || is_archive() ) {
+		// Register Superclamp.
+		wp_enqueue_script( 'cwa_newsletter-superclamp', get_template_directory_uri() . '/js/superclamp.min.js', array( 'jquery' ), '20161125' );
+	}
+
 	wp_enqueue_script( 'cwa_newsletter-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20160816', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
@@ -250,7 +255,7 @@ function cwa_newsletter_scripts() {
 		wp_enqueue_script( 'cwa_newsletter-keyboard-image-navigation', get_template_directory_uri() . '/js/keyboard-image-navigation.js', array( 'jquery' ), '20160816' );
 	}
 
-	wp_enqueue_script( 'cwa_newsletter-script', get_template_directory_uri() . '/js/functions.js', array( 'jquery' ), '20160816', true );
+	wp_enqueue_script( 'cwa_newsletter-script', get_template_directory_uri() . '/js/functions.js', array( 'jquery' ), '20180102', true );
 
 	wp_localize_script( 'cwa_newsletter-script', 'screenReaderText', array(
 		'expand'   => __( 'expand child menu', 'cwa_newsletter' ),

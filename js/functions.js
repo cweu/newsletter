@@ -197,4 +197,12 @@
 		belowEntryMetaClass( 'img.size-full' );
 		belowEntryMetaClass( 'blockquote.alignleft, blockquote.alignright' );
 	} );
+
+	// Initialize Superclamp (if loaded)
+	if ( typeof(Superclamp) !== 'undefined' ) {
+		$( document ).ready( function() {
+			$( 'article .entry-summary > p' ).clamp();
+		});
+		$( window ).on( 'resize', Superclamp.reclampAll );
+	}
 } )( jQuery );
