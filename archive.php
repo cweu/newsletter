@@ -30,6 +30,7 @@ get_header(); ?>
 				?>
 			</header><!-- .page-header -->
 
+			<div class="the-content">
 			<?php
 			// Start the Loop.
 			while ( have_posts() ) : the_post();
@@ -57,6 +58,7 @@ get_header(); ?>
 
 		endif;
 		?>
+		</div>
 
 		</main><!-- .site-main -->
 	</div><!-- .content-area -->
