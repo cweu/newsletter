@@ -28,13 +28,21 @@ function cwa_newsletter_admin_manage_post_custom_column( $name ) {
 	switch ( $name ) {
 		case 'issue_nr':
 			if ( is_pod( get_the_ID() ) ) {
-				$pods = pods( get_post_type(), get_the_ID() );
+				$pods     = pods( get_post_type(), get_the_ID() );
+				$issue_nr = $pods->field( 'issue_nr' );
+
 				if ( 'newsletter' === get_post_type() ) {
 					// For newsletter, just show the text, because it would point to itself.
-					echo esc_html( $pods->field( 'issue_nr' ) );
+					echo esc_html( $issue_nr );
 				} else {
 					// For other types, link to the newsletter.
-					edit_post_link( $pods->field( 'issue_nr' ), '', '', get_the_ID() );
+					$newsletter_pods = cwa_newsletter_pod_by_nr( 'newsletter', $issue_nr );
+					if ( $newsletter_pods->total() > 0 ) {
+						edit_post_link( $issue_nr, '', '', $newsletter_pods->id() );
+					} else {
+						// Can't link it newsletter doesn't exist.
+						echo esc_html( $issue_nr );
+					}
 				}
 			}
 	}
