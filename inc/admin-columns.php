@@ -43,6 +43,13 @@ function cwa_newsletter_admin_manage_post_custom_column( $name ) {
 						// Can't link it newsletter doesn't exist.
 						echo esc_html( $issue_nr );
 					}
+					// Include page number for newsletter articles.
+					if ( 'newsletter_article' === get_post_type() ) {
+						$page_nr = $pods->display( 'page_nr' );
+						if ( $page_nr ) {
+							echo esc_html( ' (p' . $pods->field( 'page_nr' ) . ')' );
+						}
+					}
 				}
 			}
 	}
