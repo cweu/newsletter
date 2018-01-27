@@ -49,6 +49,41 @@ function cwa_newsletter_admin_recent_posts_query_args( $query_args ) {
 add_filter( 'dashboard_recent_posts_query_args', 'cwa_newsletter_admin_recent_posts_query_args', 10 );
 
 /**
+ * Display custom post types in the 'At a glance' meta box instead of posts and pages
+ *
+ * @since CWA Newsletter 0.1
+ */
+function cwa_newsletter_admin_glance_items( $items = array() ) {
+	foreach ( array( 'newsletter', 'newsletter_article' ) as $post_type ) {
+		// @see http://wpsnipp.com/index.php/functions-php/wordpress-post-types-dashboard-at-glance-widget/
+		// @see https://github.com/WordPress/WordPress/blob/1caa918dbc1256af566fd0289bd750214db2d17d/wp-admin/includes/dashboard.php#L260
+		$num_posts = wp_count_posts( $post_type );
+		if ( $num_posts && $num_posts->publish ) {
+			$post_type_object = get_post_type_object( $post_type );
+			$text             = number_format_i18n( $num_posts->publish ) . ' '
+				. ( $num_posts->publish > 1 ? $post_type_object->labels->name : $post_type_object->labels->singular_name );
+			if ( $post_type_object && current_user_can( $post_type_object->cap->edit_posts ) ) {
+				$items[] = sprintf( '<li class="%1$s-count"><a href="edit.php?post_type=%1$s">%2$s</a></li>', esc_attr( $post_type ), esc_html( $text ) );
+			} else {
+				$items[] = printf( '<li class="%1$s-count"><span>%2$s</span></li>', esc_attr( $post_type ), esc_html( $text ) );
+			}
+		}
+	}
+	return $items;
+}
+add_filter( 'dashboard_glance_items', 'cwa_newsletter_admin_glance_items', 10 );
+
+/**
+ * Enqueues scripts and styles.
+ *
+ * @since CWA Newsletter 0.1
+ */
+function cwa_newsletter_admin_scripts() {
+	wp_enqueue_style( 'admin-styles', get_template_directory_uri() . '/css/admin.css' );
+}
+add_action( 'admin_enqueue_scripts', 'cwa_newsletter_admin_scripts' );
+
+/**
  * Removes widgets we don't want from the dashboard
  *
  * @since CWA Newsletter 0.1

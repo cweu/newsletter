@@ -1,0 +1,8 @@
+
+/* Admin icons for custom fields */
+#dashboard_right_now li.newsletter-count a:before,
+#dashboard_right_now li.newsletter-count > span:before,
+#dashboard_right_now li.newsletter_article-count a:before,
+#dashboard_right_now li.newsletter_article-count > span:before {
+	content: "\f330";
+}
