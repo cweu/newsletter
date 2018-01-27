@@ -401,6 +401,29 @@ function cwa_newsletter_widget_tag_cloud_args( $args ) {
 add_filter( 'widget_tag_cloud_args', 'cwa_newsletter_widget_tag_cloud_args' );
 
 /**
+ * Only shows articles of the last published newsletter on the frontpage.
+ *
+ * @since CWA Newsletter 0.1
+ *
+ * @param array $query Query instance to modify.
+ */
+function cwa_newsletter_pre_get_posts( $query ) {
+	if ( $query->is_home() && $query->is_main_query() ) {
+		// Only show newsletter articles.
+		$query->set( 'post_type', 'newsletter_article' );
+		// Of the last published issue (or none at all).
+		$issue  = cwa_newsletter_latest_newsletter();
+		$number = $issue ? $issue->field( 'issue_nr' ) : '';
+		$query->set( 'meta_key', 'issue_nr' );
+		$query->set( 'meta_value', $number );
+		// Order by page number.
+		$query->set( 'orderby', 'page_nr.meta_value' );
+		$query->set( 'order', 'ASC' );
+	}
+}
+add_filter( 'pre_get_posts', 'cwa_newsletter_pre_get_posts' );
+
+/**
  * Returns a human-readable version of the year-number combination.
  *
  * @since CWA Newsletter 0.1
@@ -434,4 +457,20 @@ function cwa_newsletter_pod_by_nr( $pod_type, $number ) {
 		'limit' => 1,
 	);
 	return pods( $pod_type, $query );
+}
+
+/**
+ * Returns last published newsletter issue.
+ *
+ * @since CWA Newsletter 0.1
+ *
+ * @return object Pod, or null if not found.
+ */
+function cwa_newsletter_latest_newsletter() {
+	$query = array(
+		'orderby'     => 't.post_date DESC',
+		'post_status' => 'publish',
+		'limit'       => 1,
+	);
+	return pods( 'newsletter', $query );
 }

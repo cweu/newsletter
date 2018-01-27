@@ -1678,6 +1678,12 @@ blockquote:after,
 	line-height: 1.25;
 }
 
+.page-subtitle {
+	font-size: 22px;
+	font-style: italic;
+	line-height: 1.1;
+}
+
 .entry-title a {
 	color: #1a1a1a;
 }
@@ -2141,16 +2147,31 @@ body.search-no-results .page-header {
 	display: none;
 }
 
+.home.blog .site-main > header {
+	text-align: center;
+	margin-top: -1.5em;
+	margin-bottom: 2em;
+	padding-top: 1.5em;
+	border-bottom: 1px solid #ccc;
+	border-top: 1px solid #ccc;
+}
+
+.home.blog article.type-newsletter,
+.home.blog article.type-newsletter_article,
 .archive article.type-newsletter,
 .archive article.type-newsletter_article {
 	margin-bottom: 1em;
 }
 
+.home.blog article.type-newsletter a,
+.home.blog article.type-newsletter_article a,
 .archive article.type-newsletter a,
 .archive article.type-newsletter_article a {
 	color: inherit;
 }
 
+.home.blog article.type-newsletter .entry-summary > p,
+.home.blog article.type-newsletter_article .entry-summary > p,
 .archive article.type-newsletter .entry-summary > p,
 .archive article.type-newsletter_article .entry-summary > p {
 	max-height: 20ex;
@@ -2158,6 +2179,7 @@ body.search-no-results .page-header {
 	/* @todo use clamp.js for ellipsis */
 }
 
+.home.blog article.type-newsletter_article .post-thumbnail,
 .archive article.type-newsletter_article .post-thumbnail {
 	max-height: 300px;
 	overflow: hidden;
@@ -2816,6 +2838,8 @@ p > video {
 		margin-bottom: 0.8484848485em;
 	}*/
 
+	.home.blog article.type-newsletter,
+	.home.blog article.type-newsletter_article,
 	.archive article.type-newsletter,
 	.archive article.type-newsletter_article {
 		float: left;
@@ -3348,6 +3372,11 @@ p > video {
 		margin-right: 8%;
 	}
 
+	.home.blog article.type-newsletter_article .entry-header,
+	.home.blog article.type-newsletter_article .entry-content,
+	.home.blog article.type-newsletter_article .entry-summary,
+	.home.blog article.type-newsletter_article .entry-footer,
+	.home.blog article.type-newsletter_article .post-thumbnail,
 	.archive article.type-newsletter_article .entry-header,
 	.archive article.type-newsletter_article .entry-content,
 	.archive article.type-newsletter_article .entry-summary,
@@ -3590,6 +3619,7 @@ p > video {
 
 @media screen and (min-width: 75em) {
 
+	.home.blog article.type-newsletter_article,
 	.archive article.type-newsletter,
 	.archive article.type-newsletter_article {
 		width: 33.33%;
