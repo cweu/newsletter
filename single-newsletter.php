@@ -11,6 +11,11 @@
 
 $slug = pods_v( 'last', 'url' );
 $pods = pods( 'newsletter', $slug );
-$pdf  = pods_image_url( $pods->field( 'pdf_input' ), 'thumbnail' );
+$pdf  = $pods->field( 'pdf_file' );
 
-header( 'Location: ' . $pdf );
+if ( $pdf && $pdf['guid'] ) {
+	header( 'Location: ' . $pdf['guid'] );
+} else {
+	status_header( 404 );
+	include get_query_template( '404' );
+}
