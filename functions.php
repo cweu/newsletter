@@ -322,6 +322,11 @@ function cwa_newsletter_hex2rgb( $color ) {
 }
 
 /**
+ * Custom permalink structure for newsletter custom post types.
+ */
+require get_template_directory() . '/inc/permalinks.php';
+
+/**
  * Custom template tags for this theme.
  */
 require get_template_directory() . '/inc/template-tags.php';
