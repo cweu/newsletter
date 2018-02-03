@@ -412,13 +412,22 @@ function cwa_newsletter_pre_get_posts( $query ) {
 		// Only show newsletter articles.
 		$query->set( 'post_type', 'newsletter_article' );
 		// Of the last published issue (or none at all).
-		$issue  = cwa_newsletter_latest_newsletter();
-		$number = $issue ? $issue->field( 'issue_nr' ) : '';
-		$query->set( 'meta_key', 'issue_nr' );
-		$query->set( 'meta_value', $number );
+		$issue = cwa_newsletter_latest_newsletter();
+		// Filter by issue number (using meta_query so meta_key is available for ordering).
+		// If there is no latest issue, we don't want to show anything, use dummy string.
+		$number = $issue ? $issue->field( 'issue_nr' ) : '__xxxxxxxxx__';
+		$query->set( 'meta_query', array(
+			array(
+				'key'   => 'issue_nr',
+				'value' => $number,
+			),
+		));
 		// Order by page number.
-		$query->set( 'orderby', 'page_nr.meta_value' );
+		$query->set( 'meta_key', 'page_nr' );
+		$query->set( 'orderby', 'meta_value_num' );
 		$query->set( 'order', 'ASC' );
+		// We want to show all articles for this issue, no paging.
+		$query->set( 'paged', false );
 	}
 }
 add_filter( 'pre_get_posts', 'cwa_newsletter_pre_get_posts' );
@@ -472,5 +481,6 @@ function cwa_newsletter_latest_newsletter() {
 		'post_status' => 'publish',
 		'limit'       => 1,
 	);
-	return pods( 'newsletter', $query );
+	$pods  = pods( 'newsletter', $query );
+	return $pods && $pods->total() > 0 ? $pods : null;
 }
