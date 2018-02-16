@@ -9,8 +9,7 @@
  * @since CWA Newsletter 0.1
  */
 
-$slug = pods_v( 'last', 'url' );
-$pods = pods( 'newsletter', $slug );
+$pods = pods( 'newsletter', get_the_ID() );
 $pdf  = $pods->field( 'pdf_file' );
 
 if ( $pdf && $pdf['guid'] ) {

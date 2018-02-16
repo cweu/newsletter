@@ -433,6 +433,17 @@ function cwa_newsletter_pre_get_posts( $query ) {
 		$query->set( 'order', 'ASC' );
 		// We want to show all articles for this issue, no paging.
 		$query->set( 'paged', false );
+	} else if ( $query->is_archive( 'newsletter_article' ) && $query->is_main_query() ) {
+		$issue_nr = get_query_var( 'issue_nr' );
+		if ( $issue_nr ) {
+			$query->set( 'meta_key', 'issue_nr' );
+			$query->set( 'meta_value', $issue_nr );
+			// Hack to make this a single newsletter.
+			unset($query->is_archive);
+			unset($query->is_post_type_archive);
+			$query->is_single = 1;
+			$query->is_singular = 1;
+		}
 	}
 }
 add_filter( 'pre_get_posts', 'cwa_newsletter_pre_get_posts' );
