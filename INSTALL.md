@@ -28,7 +28,7 @@
   7. Add menu _Social Links_, adding custom links for _Facebook_ and _Twitter_
 6. Configure permalinks
   1. Install plugin: _Custom Post Type Permalinks_
-  2. For `newsletter_article` set permalink to: `/%issue_nr%/%postname%/`
+  2. For `newsletter_article` set permalink to: `/%issue_nr%/%postname%-%post_id%/`
   3. For `newsletter` set permalink to: `/%issue_nr%/`
 
 ## Content

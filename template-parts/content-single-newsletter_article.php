@@ -7,9 +7,7 @@
  * @since CWA Newsletter 0.1
  */
 
-$slug = pods_v( 'last', 'url' );
-$pods = pods( 'newsletter_article', $slug );
-
+$pods       = pods( 'newsletter_article', get_the_ID() );
 $intro      = $pods->field( 'intro' );
 $issue_nr   = $pods->field( 'issue_nr' );
 $issue_date = null;
