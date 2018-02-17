@@ -318,7 +318,7 @@ h6 {
 }
 
 p {
-	margin: 0 0 1.5em;
+	margin: 0 0 0.9em;
 }
 
 dfn,
@@ -329,11 +329,10 @@ i {
 }
 
 blockquote {
-	border: 0 solid #1a1a1a;
-	border-left-width: 4px;
 	color: #686868;
-	font-size: 19px;
-	font-style: italic;
+	font-family: "Playfair Display", Georgia, serif;
+	font-size: 22px;
+	font-style: normal;
 	line-height: 1.4736842105;
 	margin: 0 0 1.4736842105em;
 	overflow: hidden;
@@ -1670,7 +1669,7 @@ blockquote:after,
 	margin-bottom: 1.5em;
 }
 
-.entry-title,
+/*.entry-title,*/
 .page-title {
 	font-family: "Playfair Display", Georgia, serif;
 	font-size: 50px;
@@ -1733,7 +1732,8 @@ article > a:focus {
 .entry-summary h1,
 .comment-content h1,
 .textwidget h1 {
-	font-size: 50px;
+	font-family: "Playfair Display", Georgia, serif;
+	font-size: 45px;
 	font-weight: 700;
 	line-height: 1.25;
 	margin-bottom: 1em;
@@ -1743,8 +1743,9 @@ article > a:focus {
 .entry-summary h2,
 .comment-content h2,
 .textwidget h2 {
-	font-size: 30px;
-	font-weight: 400;
+	font-family: Lora, Georgia, serif;
+	font-size: 25px;
+	font-weight: 700;
 	font-style: italic;
 	line-height: 1.2173913043;
 	margin-bottom: 0.2em;
@@ -1754,11 +1755,12 @@ article > a:focus {
 .entry-summary h3,
 .comment-content h3,
 .textwidget h3 {
+	color: lightseagreen;
 	font-size: 25px;
-	font-weight: 600;
+	font-weight: 400;
 	font-style: italic;
 	line-height: 1.1052631579;
-	margin-bottom: 0.2em;
+	margin: 0.2em 0 0.4em 0;
 }
 
 .entry-content h4,
@@ -1859,8 +1861,8 @@ article > a:focus {
 
 body:not(.search-results) .entry-summary {
 	font-style: italic;
-	font-size: 19px;
-	line-height: 1.4736842105;
+	font-size: 20px;
+	line-height: 1.75;
 	margin-bottom: 1.4736842105em;
 }
 
@@ -1874,7 +1876,7 @@ body:not(.search-results) .entry-header + .post-thumbnail {
 }
 
 body:not(.search-results) .entry-summary + .post-thumbnail {
-	margin-top: -1.4736842105em;
+	margin-top: -0.6em;
 }
 
 body:not(.search-results) .entry-summary p,
@@ -1930,6 +1932,15 @@ body:not(.search-results) .entry-summary > :last-child,
 .comment-content > :last-child,
 .textwidget > :last-child {
 	margin-bottom: 0;
+}
+
+.entry-content blockquote:before {
+	color: #ccc;
+	content: '“';
+	font-size: 52px;
+	margin-top: -20px;
+	margin-bottom: -50px;
+	margin-left: -30px;
 }
 
 .more-link {
@@ -2185,6 +2196,7 @@ body.search-no-results .page-header {
 	overflow: hidden;
 }
 
+/*
 .type-newsletter .entry-title,
 .type-newsletter_article .entry-title {
 	font-family: Lora, Georgia, serif;
@@ -2193,6 +2205,7 @@ body.search-no-results .page-header {
 	line-height: 1.1;
 	margin-bottom: 0.2em;
 }
+*/
 
 .type-newsletter .entry-subtitle,
 .type-newsletter_article .entry-subtitle {
@@ -2755,6 +2768,7 @@ p > video {
 	.site-branding {
 		margin-top: 1.3125em;
 		margin-bottom: 1.3125em;
+		margin-left: 1.3em;
 	}
 
 	.custom-logo {
@@ -2858,7 +2872,7 @@ p > video {
 	.entry-content blockquote:not(.alignleft):not(.alignright),
 	.entry-summary blockquote,
 	.comment-content blockquote {
-		margin-left: -1.473684211em;
+		margin: 1em 3em 1em 2em;
 	}
 
 	.entry-content blockquote blockquote:not(.alignleft):not(.alignright),
@@ -2980,7 +2994,7 @@ p > video {
 	}
 
 	.main-navigation {
-		margin: 0 -0.875em;
+		margin: 0 3% 0 0;
 	}
 
 	.main-navigation .primary-menu,
@@ -3363,6 +3377,10 @@ p > video {
 		margin-left: 15%;
 	}
 
+	.entry-header {
+		margin-right: 30%;
+	}
+
 	.archive article.type-newsletter .entry-header,
 	.archive article.type-newsletter .entry-content,
 	.archive article.type-newsletter .entry-summary,
@@ -3382,8 +3400,8 @@ p > video {
 	.archive article.type-newsletter_article .entry-summary,
 	.archive article.type-newsletter_article .entry-footer,
 	.archive article.type-newsletter_article .post-thumbnail {
-		margin-left: 12%;
-		margin-right: 12%;
+		margin-left: 6%;
+		margin-right: 6%;
 	}
 
 	.archive.post-type-archive-newsletter .page-header {
@@ -3418,6 +3436,7 @@ p > video {
 	.header-image {
 		margin-top: 0;
 		margin-bottom: 1.75em;
+		margin-left: 2%;
 	}
 
 	.custom-logo {
@@ -3627,7 +3646,7 @@ p > video {
 
 	body:not(.search-results) .entry-summary {
 		font-size: 20px;
-		line-height: 1.5217391304;
+		line-height: 1.75;
 		margin-bottom: 1.826086957em;
 	}
 
@@ -3636,7 +3655,7 @@ p > video {
 	}
 
 	body:not(.search-results) .entry-summary + .post-thumbnail {
-		margin-top: -1.826086957em;
+		margin-top: -0.6em;
 	}
 
 	body:not(.search-results) .entry-summary p,

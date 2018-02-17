@@ -177,7 +177,7 @@ function cwa_newsletter_fonts_url() {
 
 	/* translators: If there are characters in your language that are not supported by Playfair Display, translate this to 'off'. Do not translate into your own language. */
 	if ( 'off' !== _x( 'on', 'Playfair Display font: on or off', 'cwa_newsletter' ) ) {
-		$fonts[] = 'Playfair Display:700,900,700italic';
+		$fonts[] = 'Playfair Display:400,700,900,700italic';
 	}
 
 	/* translators: If there are characters in your language that are not supported by Lato, translate this to 'off'. Do not translate into your own language. */
