@@ -406,13 +406,27 @@ function cwa_newsletter_widget_tag_cloud_args( $args ) {
 add_filter( 'widget_tag_cloud_args', 'cwa_newsletter_widget_tag_cloud_args' );
 
 /**
- * Only shows articles of the last published newsletter on the frontpage.
+ * Modifications to database queries.
  *
  * @since CWA Newsletter 0.1
  *
  * @param array $query Query instance to modify.
  */
 function cwa_newsletter_pre_get_posts( $query ) {
+	// If the issue_nr query variable is set, use it in the database query.
+	$issue_nr = get_query_var( 'issue_nr' );
+	if ( $issue_nr ) {
+		// @todo Check if we need to append this to meta_query (instead of replacing it).
+		$query->set( 'meta_query', array(
+			array(
+				'key'   => 'issue_nr',
+				'value' => $issue_nr,
+			),
+		));
+	}
+
+	// Show articles of last published newsletter on the frontpage.
+	// @todo Only if blog.
 	if ( $query->is_home() && $query->is_main_query() ) {
 		// Only show newsletter articles.
 		$query->set( 'post_type', 'newsletter_article' );
@@ -433,12 +447,12 @@ function cwa_newsletter_pre_get_posts( $query ) {
 		$query->set( 'order', 'ASC' );
 		// We want to show all articles for this issue, no paging.
 		$query->set( 'paged', false );
+
+	// Show newsletter articles as children of the issue.
 	} else if ( $query->is_archive( 'newsletter_article' ) && $query->is_main_query() ) {
-		$issue_nr = get_query_var( 'issue_nr' );
 		if ( $issue_nr ) {
-			$query->set( 'meta_key', 'issue_nr' );
-			$query->set( 'meta_value', $issue_nr );
 			// Hack to make this a single newsletter.
+			// @todo Find a better way to let WordPress know this is a single post.
 			unset($query->is_archive);
 			unset($query->is_post_type_archive);
 			$query->is_single = 1;
