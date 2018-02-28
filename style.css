@@ -2174,6 +2174,13 @@ body.search-no-results .page-header {
 	margin-bottom: 1em;
 }
 
+.newsletter-post-thumbnail-container {
+	/* Fixed height to keep floats aligned.
+	 * TODO custom thumbnail size for type / crop in UI on upload. */
+	height: 300px;
+	overflow: hidden;
+}
+
 .home.blog article.type-newsletter a,
 .home.blog article.type-newsletter_article a,
 .archive article.type-newsletter a,
@@ -2188,12 +2195,6 @@ body.search-no-results .page-header {
 	max-height: 20ex;
 	overflow: hidden;
 	/* @todo use clamp.js for ellipsis */
-}
-
-.home.blog article.type-newsletter_article .post-thumbnail,
-.archive article.type-newsletter_article .post-thumbnail {
-	max-height: 300px;
-	overflow: hidden;
 }
 
 /*

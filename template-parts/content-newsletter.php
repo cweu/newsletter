@@ -22,7 +22,9 @@ $issue_nr = $pods->field( 'issue_nr' );
 			<?php the_title( '<p class="entry-subtitle">', '</p>' ); ?>
 		</header><!-- .entry-header -->
 
-		<?php cwa_newsletter_post_thumbnail( false ); ?>
+		<div class="newsletter-post-thumbnail-container">
+			<?php cwa_newsletter_post_thumbnail( false ); /* @todo include fallback image */ ?>
+		</div>
 	</a>
 
 	<footer class="entry-footer">

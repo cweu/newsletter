@@ -463,6 +463,7 @@ function cwa_newsletter_pre_get_posts( $query ) {
 			$query->set( 'meta_key', 'issue_nr' );
 			$query->set( 'orderby', 'meta_value_num' );
 			$query->set( 'order', 'DESC' );
+			$query->set( 'posts_per_page', 6 ); // So it fits in a 2- and 3-col grid.
 		}
 	}
 }
