@@ -448,15 +448,21 @@ function cwa_newsletter_pre_get_posts( $query ) {
 		// We want to show all articles for this issue, no paging.
 		$query->set( 'paged', false );
 
-	// Show newsletter articles as children of the issue.
-	} else if ( $query->is_archive( 'newsletter_article' ) && $query->is_main_query() ) {
+	} else if ( $query->is_archive( 'newsletter' ) && $query->is_main_query() ) {
+
+		// Hack to make this a single newsletter.
 		if ( $issue_nr ) {
-			// Hack to make this a single newsletter.
 			// @todo Find a better way to let WordPress know this is a single post.
 			unset($query->is_archive);
 			unset($query->is_post_type_archive);
 			$query->is_single = 1;
 			$query->is_singular = 1;
+
+		// Order newsletter archive by reverse issue number
+		} else {
+			$query->set( 'meta_key', 'issue_nr' );
+			$query->set( 'orderby', 'meta_value_num' );
+			$query->set( 'order', 'DESC' );
 		}
 	}
 }
