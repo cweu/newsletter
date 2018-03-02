@@ -2223,6 +2223,10 @@ body.search-no-results .page-header {
 	margin-left: 7.6923%;
 }
 
+.archive.post-type-archive-newsletter .the-content .pagination {
+	clear: both;
+}
+
 /**
  * 11.4 - Comments
  */
