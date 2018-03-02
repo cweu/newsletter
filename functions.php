@@ -514,7 +514,7 @@ function cwa_newsletter_pod_by_nr( $pod_type, $number ) {
  */
 function cwa_newsletter_latest_newsletter() {
 	$query = array(
-		'orderby'     => 't.post_date DESC',
+		'orderby'     => 'issue_nr.meta_value DESC',
 		'post_status' => 'publish',
 		'limit'       => 1,
 	);
