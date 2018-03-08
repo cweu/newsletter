@@ -16,6 +16,7 @@
 4. Install this theme using a zip archive
   1. _Appearance_ > _Themes_ > _Add New_ > _Upload Theme_ and install the archive.
   2. Activate the theme.
+  3. Install and activate the [github-updater plugin](https://github.com/afragen/github-updater/wiki/Installation)
 5. Customize the theme
   1. Logo
   2. Site title: _Catholic Worker Amsterdam_
