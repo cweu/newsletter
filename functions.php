@@ -413,57 +413,60 @@ add_filter( 'widget_tag_cloud_args', 'cwa_newsletter_widget_tag_cloud_args' );
  * @param array $query Query instance to modify.
  */
 function cwa_newsletter_pre_get_posts( $query ) {
-	// If the issue_nr query variable is set, use it in the database query.
-	$issue_nr = get_query_var( 'issue_nr' );
-	if ( $issue_nr ) {
-		// @todo Check if we need to append this to meta_query (instead of replacing it).
-		$query->set( 'meta_query', array(
-			array(
-				'key'   => 'issue_nr',
-				'value' => $issue_nr,
-			),
-		));
-	}
 
-	// Show articles of last published newsletter on the frontpage.
-	// @todo Only if blog.
-	if ( $query->is_home() && $query->is_main_query() ) {
-		// Only show newsletter articles.
-		$query->set( 'post_type', 'newsletter_article' );
-		// Of the last published issue (or none at all).
-		$issue = cwa_newsletter_latest_newsletter();
-		// Filter by issue number (using meta_query so meta_key is available for ordering).
-		// If there is no latest issue, we don't want to show anything, use dummy string.
-		$number = $issue ? $issue->field( 'issue_nr' ) : '__xxxxxxxxx__';
-		$query->set( 'meta_query', array(
-			array(
-				'key'   => 'issue_nr',
-				'value' => $number,
-			),
-		));
-		// Order by page number.
-		$query->set( 'meta_key', 'page_nr' );
-		$query->set( 'orderby', 'meta_value_num' );
-		$query->set( 'order', 'ASC' );
-		// We want to show all articles for this issue, no paging.
-		$query->set( 'paged', false );
-
-	} else if ( $query->is_archive( 'newsletter' ) && $query->is_main_query() ) {
-
-		// Hack to make this a single newsletter.
+	if ( ! is_admin() && $query->is_main_query() ) {
+		// If the issue_nr query variable is set, use it in the database query.
+		$issue_nr = get_query_var( 'issue_nr' );
 		if ( $issue_nr ) {
-			// @todo Find a better way to let WordPress know this is a single post.
-			unset($query->is_archive);
-			unset($query->is_post_type_archive);
-			$query->is_single = 1;
-			$query->is_singular = 1;
+			// @todo Check if we need to append this to meta_query (instead of replacing it).
+			$query->set( 'meta_query', array(
+				array(
+					'key'   => 'issue_nr',
+					'value' => $issue_nr,
+				),
+			));
+		}
 
-		// Order newsletter archive by reverse issue number
-		} else {
-			$query->set( 'meta_key', 'issue_nr' );
+		// Show articles of last published newsletter on the frontpage.
+		// @todo Only if blog.
+		if ( $query->is_home() ) {
+			// Only show newsletter articles.
+			$query->set( 'post_type', 'newsletter_article' );
+			// Of the last published issue (or none at all).
+			$issue = cwa_newsletter_latest_newsletter();
+			// Filter by issue number (using meta_query so meta_key is available for ordering).
+			// If there is no latest issue, we don't want to show anything, use dummy string.
+			$number = $issue ? $issue->field( 'issue_nr' ) : '__xxxxxxxxx__';
+			$query->set( 'meta_query', array(
+				array(
+					'key'   => 'issue_nr',
+					'value' => $number,
+				),
+			));
+			// Order by page number.
+			$query->set( 'meta_key', 'page_nr' );
 			$query->set( 'orderby', 'meta_value_num' );
-			$query->set( 'order', 'DESC' );
-			$query->set( 'posts_per_page', 6 ); // So it fits in a 2- and 3-col grid.
+			$query->set( 'order', 'ASC' );
+			// We want to show all articles for this issue, no paging.
+			$query->set( 'paged', false );
+
+		} else if ( $query->is_archive( 'newsletter' ) ) {
+
+			// Hack to make this a single newsletter.
+			if ( $issue_nr ) {
+				// @todo Find a better way to let WordPress know this is a single post.
+				unset($query->is_archive);
+				unset($query->is_post_type_archive);
+				$query->is_single = 1;
+				$query->is_singular = 1;
+
+			// Order newsletter archive by reverse issue number
+			} else {
+				$query->set( 'meta_key', 'issue_nr' );
+				$query->set( 'orderby', 'meta_value_num' );
+				$query->set( 'order', 'DESC' );
+				$query->set( 'posts_per_page', 6 ); // So it fits in a 2- and 3-col grid.
+			}
 		}
 	}
 }
