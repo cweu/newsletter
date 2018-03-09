@@ -448,7 +448,7 @@ function cwa_newsletter_pre_get_posts( $query ) {
 			$query->set( 'orderby', 'meta_value_num' );
 			$query->set( 'order', 'ASC' );
 			// We want to show all articles for this issue, no paging.
-			$query->set( 'paged', false );
+			$query->set( 'posts_per_page', -1 );
 
 		} else if ( $query->is_archive( 'newsletter' ) ) {
 
