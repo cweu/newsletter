@@ -2979,9 +2979,11 @@ p > video {
 		margin-left: 1.473684211em;
 	}
 
-	.archive.post-type-archive-newsletter .page-header,
+	.archive.post-type-archive-newsletter .page-header {
+		margin-left: 7.4%;
+	}
 	.archive.post-type-archive-newsletter_article .page-header {
-		margin-left: 4%;
+		margin-left: 7.5%;
 	}
 }
 
@@ -3435,10 +3437,10 @@ p > video {
 	}
 
 	.archive.post-type-archive-newsletter .page-header {
-		margin-left: 4%;
+		margin-left: 3.9%;
 	}
 	.archive.post-type-archive-newsletter_article .page-header {
-		margin-left: 6%;
+		margin-left: 3%;
 	}
 
 	.widecolumn {
@@ -3794,7 +3796,7 @@ p > video {
 		margin-left: 2.75%;
 	}
 	.archive.post-type-archive-newsletter_article .page-header {
-		margin-left: 4%;
+		margin-left: 2%;
 	}
 }
 
