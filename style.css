@@ -455,7 +455,7 @@ html {
 }
 
 body {
-	background: #1a1a1a;
+	background: #fff;
 	/* Fallback for when there is no custom background color defined. */
 }
 
@@ -1665,12 +1665,22 @@ blockquote:after,
 	margin-left: 7.6923%;
 }
 
+.entry-content img.alignnone {
+	margin-right: -9%;
+	margin-left: -9%;
+	max-width: 118%;
+}
+
+.entry-content img.alignleft {
+	margin-right: 2.25em;
+}
+
 .page-header,
 .entry-header {
 	margin-bottom: 1.5em;
 }
 
-/*.entry-title,*/
+.entry-title,
 .page-title {
 	font-family: "Playfair Display", Georgia, serif;
 	font-size: 50px;
@@ -1682,6 +1692,10 @@ blockquote:after,
 	font-size: 22px;
 	font-style: italic;
 	line-height: 1.1;
+}
+
+.entry-title {
+	font-size: 25px;
 }
 
 .entry-title a {
@@ -2161,7 +2175,6 @@ body.search-no-results .page-header {
 
 .home.blog .site-main > header {
 	text-align: center;
-	margin-top: -1.5em;
 	margin-bottom: 2em;
 	padding-top: 1.5em;
 	border-bottom: 1px solid #ccc;
@@ -2768,7 +2781,7 @@ p > video {
 	}
 
 	.site-header {
-		padding: 2em 7.6923%;
+		padding: 1em 7.6923%;
 	}
 
 	.site-branding {
@@ -2849,7 +2862,8 @@ p > video {
 	.page-header,
 	.page-content,
 	.content-bottom-widgets {
-		margin-right: 23.0769%;
+		margin-right: 15%;
+		margin-left: 15%;
 	}
 
 	/*.entry-title {
@@ -2865,6 +2879,16 @@ p > video {
 		float: left;
 		vertical-align: top;
 		width: 50%;
+	}
+
+	.entry-content img.alignleft {
+		margin-right: 1.75em;
+		margin-bottom: 1em;
+		margin-left: -9%;
+	}
+
+	.entry-content img.alignright {
+		margin-right: -9%;
 	}
 
 	.entry-content blockquote.alignleft,
@@ -3000,7 +3024,7 @@ p > video {
 	}
 
 	.main-navigation {
-		margin: 0 3% 0 0;
+		margin: 0 3% 0 -3%;
 	}
 
 	.main-navigation .primary-menu,
@@ -3434,7 +3458,7 @@ p > video {
 	}
 
 	.site-header {
-		padding: 3em 4.5455%;
+		padding: 1.5em 4.5455% 0 4.5455%;
 	}
 
 	.site-branding,
