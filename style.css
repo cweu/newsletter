@@ -1694,10 +1694,6 @@ blockquote:after,
 	line-height: 1.1;
 }
 
-.entry-title {
-	font-size: 25px;
-}
-
 .entry-title a {
 	color: #1a1a1a;
 }
@@ -2193,6 +2189,11 @@ body.search-no-results .page-header {
 	 * TODO custom thumbnail size for type / crop in UI on upload. */
 	height: 300px;
 	overflow: hidden;
+}
+
+.blog .entry-title {
+	font-family: Lora, Georgia, serif;
+	font-size: 25px;
 }
 
 .home.blog article.type-newsletter a,
