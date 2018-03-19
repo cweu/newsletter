@@ -1597,6 +1597,16 @@ blockquote:after,
 	margin: 0.538461538em 0 0;
 }
 
+/* @todo make temporary hack to get the title we want more general */
+.site-title {
+	width: 6.5em;
+	line-height: 0.8 !important;
+	padding-bottom: 0.1ex; /* don't clip font because of line-height */
+}
+.site-description {
+	margin-top: 0.5ex !important;
+}
+
 .menu-toggle {
 	background-color: transparent;
 	border: 1px solid #d1d1d1;
