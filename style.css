@@ -2236,6 +2236,12 @@ body.search-no-results .page-header {
 	overflow: hidden;
 }
 
+/* avoid Superclamp blank line corner-case */
+/* @todo move to a better place */
+.clamp-ellipsis.is-not-required {
+	display: none;
+}
+
 /*
 .type-newsletter .entry-title,
 .type-newsletter_article .entry-title {
