@@ -2203,13 +2203,27 @@ body.search-no-results .page-header {
 	color: inherit;
 }
 
+.home.blog article.type-newsletter .entry-header,
+.home.blog article.type-newsletter_article .entry-header,
+.archive article.type-newsletter .entry-header,
+.archive article.type-newsletter_article .entry-header {
+	margin-bottom: 3.25ex; /* make gap between title and text a bit smaller */
+}
+
+
+.home.blog article.type-newsletter .entry-summary,
+.home.blog article.type-newsletter_article .entry-summary,
+.archive article.type-newsletter .entry-summary,
+.archive article.type-newsletter_article .entry-summary {
+	margin-bottom: 2ex; /* make gap between text and image a bit smaller */
+}
+
 .home.blog article.type-newsletter .entry-summary > p,
 .home.blog article.type-newsletter_article .entry-summary > p,
 .archive article.type-newsletter .entry-summary > p,
 .archive article.type-newsletter_article .entry-summary > p {
-	max-height: 20ex;
+	max-height: 21ex; /* using Superclamp for ellipsis */
 	overflow: hidden;
-	/* @todo use clamp.js for ellipsis */
 }
 
 /*
