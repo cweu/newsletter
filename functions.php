@@ -406,6 +406,20 @@ function cwa_newsletter_widget_tag_cloud_args( $args ) {
 add_filter( 'widget_tag_cloud_args', 'cwa_newsletter_widget_tag_cloud_args' );
 
 /**
+ * Customize archive title
+ *
+ * @since CWA Newletter 0.1
+ */
+function cwa_newsletter_get_the_archive_title( $title ) {
+	if ( is_post_type_archive( 'newsletter' ) ) {
+		return __( 'Archief', 'cwa_newsletter' );
+	} elseif ( is_post_type_archive( 'newsletter_article' ) ) {
+		return post_type_archive_title( '', false );
+	}
+}
+add_filter( 'get_the_archive_title', 'cwa_newsletter_get_the_archive_title' );
+
+/**
  * Modifications to database queries.
  *
  * @since CWA Newsletter 0.1
