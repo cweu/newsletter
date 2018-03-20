@@ -1693,7 +1693,7 @@ blockquote:after,
 .entry-title,
 .page-title {
 	font-family: "Playfair Display", Georgia, serif;
-	font-size: 50px;
+	font-size: 40px;
 	font-weight: 700;
 	line-height: 1.25;
 }
@@ -2199,6 +2199,7 @@ body.search-no-results .page-header {
 	 * TODO custom thumbnail size for type / crop in UI on upload. */
 	height: 300px;
 	overflow: hidden;
+	margin-top: -0.5em;
 }
 
 .blog .entry-title {
@@ -2242,21 +2243,18 @@ body.search-no-results .page-header {
 	display: none;
 }
 
-/*
-.type-newsletter .entry-title,
-.type-newsletter_article .entry-title {
+.type-newsletter .entry-title {
 	font-family: Lora, Georgia, serif;
-	font-style: italic;
-	font-size: 22px;
+	font-size: 25px;
 	line-height: 1.1;
 	margin-bottom: 0.2em;
 }
-*/
 
 .type-newsletter .entry-subtitle,
 .type-newsletter_article .entry-subtitle {
 	line-height: 1.5;
 	font-size: 20px;
+	font-style: italic;
 	white-space: nowrap;
 	overflow: hidden;
 	text-overflow: ellipsis;
@@ -3449,8 +3447,8 @@ p > video {
 	.archive article.type-newsletter .entry-summary,
 	.archive article.type-newsletter .entry-footer,
 	.archive article.type-newsletter .post-thumbnail {
-		margin-left: 8%;
-		margin-right: 8%;
+		margin-left: 6%;
+		margin-right: 6%;
 	}
 
 	.home.blog article.type-newsletter_article .entry-header,
@@ -3528,11 +3526,10 @@ p > video {
 
 	.page-header,
 	.entry-header {
-		margin-bottom: 2em;
+		margin-bottom: 1.5em;
 	}
 
 	.page-title, .entry-title {
-		font-size: 40px;
 		line-height: 1.225;
 	}
 
@@ -3828,7 +3825,7 @@ p > video {
 	}
 
 	.archive.post-type-archive-newsletter .page-header {
-		margin-left: 2.75%;
+		margin-left: 2%;
 	}
 	.archive.post-type-archive-newsletter_article .page-header {
 		margin-left: 2%;
