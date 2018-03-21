@@ -3203,6 +3203,19 @@ p > video {
 		margin-left: 0;
 	}
 
+	.entry-content .wp-caption.alignnone {
+  	  	margin-right: -9%;
+    	margin-left: -9%;
+	}
+
+	.entry-content .wp-caption.alignleft {
+    	margin-left: -9%;
+	}
+
+	.entry-content .wp-caption.alignright {
+    	margin-right: -9%;
+	}
+
 	.widget {
 		font-size: 13px;
 		line-height: 1.6153846154;
