@@ -1597,6 +1597,16 @@ blockquote:after,
 	margin: 0.538461538em 0 0;
 }
 
+/* @todo make temporary hack to get the title we want more general */
+.site-title {
+	width: 6.5em;
+	line-height: 0.8 !important;
+	padding-bottom: 0.1ex; /* don't clip font because of line-height */
+}
+.site-description {
+	margin-top: 0.5ex !important;
+}
+
 .menu-toggle {
 	background-color: transparent;
 	border: 1px solid #d1d1d1;
@@ -2204,13 +2214,33 @@ body.search-no-results .page-header {
 	color: inherit;
 }
 
+.home.blog article.type-newsletter .entry-header,
+.home.blog article.type-newsletter_article .entry-header,
+.archive article.type-newsletter .entry-header,
+.archive article.type-newsletter_article .entry-header {
+	margin-bottom: 3.25ex; /* make gap between title and text a bit smaller */
+}
+
+
+.home.blog article.type-newsletter .entry-summary,
+.home.blog article.type-newsletter_article .entry-summary,
+.archive article.type-newsletter .entry-summary,
+.archive article.type-newsletter_article .entry-summary {
+	margin-bottom: 2ex; /* make gap between text and image a bit smaller */
+}
+
 .home.blog article.type-newsletter .entry-summary > p,
 .home.blog article.type-newsletter_article .entry-summary > p,
 .archive article.type-newsletter .entry-summary > p,
 .archive article.type-newsletter_article .entry-summary > p {
-	max-height: 20ex;
+	max-height: 21ex; /* using Superclamp for ellipsis */
 	overflow: hidden;
-	/* @todo use clamp.js for ellipsis */
+}
+
+/* avoid Superclamp blank line corner-case */
+/* @todo move to a better place */
+.clamp-ellipsis.is-not-required {
+	display: none;
 }
 
 .type-newsletter .entry-title {
@@ -3592,6 +3622,7 @@ p > video {
 		margin-bottom: 2.210526316em;
 	}
 
+	/*
 	body:not(.search-results) .entry-header + .entry-summary {
 		margin-top: -1.105263158em;
 	}
@@ -3602,6 +3633,7 @@ p > video {
 	body:not(.search-results) .entry-summary + .post-thumbnail {
 		margin-top: -2.210526316em;
 	}
+	*/
 
 
 	body:not(.search-results) article:not(.type-page) .entry-content > blockquote.alignleft.below-entry-meta {
@@ -3681,6 +3713,7 @@ p > video {
 		margin-bottom: 1.826086957em;
 	}
 
+	/*
 	body:not(.search-results) .entry-header + .entry-summary {
 		margin-top: -0.913043478em;
 	}
@@ -3688,6 +3721,7 @@ p > video {
 	body:not(.search-results) .entry-summary + .post-thumbnail {
 		margin-top: -0.6em;
 	}
+	*/
 
 	body:not(.search-results) .entry-summary p,
 	body:not(.search-results) .entry-summary address,
@@ -4027,9 +4061,11 @@ p > video {
 		width: calc(50% - 0.736842105em);
 	}
 
+	/*
 	body:not(.search-results) .entry-header + .entry-summary {
 		margin-top: -1.473684211em;
 	}
+	*/
 
 	.site-footer,
 	.widecolumn {

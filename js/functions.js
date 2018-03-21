@@ -198,21 +198,28 @@
 		belowEntryMetaClass( 'blockquote.alignleft, blockquote.alignright' );
 	} );
 
-	// Initialize Superclamp (if loaded)
-	if ( typeof(Superclamp) !== 'undefined' ) {
+	// Initialize Masonry (if loaded)
+	if ( typeof(Masonry) !== 'undefined' ) {
+		$( document ).imagesLoaded( function() {
+			$grid = $( 'main > .the-content' ).masonry({
+				initLayout: false,
+				itemSelector: 'article',
+				percentPosition: true,
+			});
+			if ( typeof(Superclamp) !== 'undefined' ) {
+				$grid.masonry( 'on', 'layoutComplete', function() {
+					$( 'article .entry-summary > p' ).clamp();
+				});
+			}
+			$grid.masonry();
+		});
+
+	// Initialize Superclamp (if loaded and Masonry isn't loaded)
+	} else if ( typeof(Superclamp) !== 'undefined' ) {
 		$( document ).ready( function() {
 			$( 'article .entry-summary > p' ).clamp();
 		});
 		$( window ).on( 'resize', Superclamp.reclampAll );
 	}
 
-	// Initialize Masonry (if loaded)
-	if ( typeof(Masonry) !== 'undefined' ) {
-		$( document ).imagesLoaded( function() {
-			$grid = $( 'main > .the-content' ).masonry({
-				itemSelector: 'article',
-				percentPosition: true,
-			});
-		});
-	}
 } )( jQuery );
