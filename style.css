@@ -1529,6 +1529,7 @@ blockquote:after,
 
 .site-main {
 	margin-bottom: 3.5em;
+	border-top: 1px solid #ccc;
 }
 
 .site-main > :last-child {
@@ -1688,6 +1689,7 @@ blockquote:after,
 .page-header,
 .entry-header {
 	margin-bottom: 1.5em;
+	padding-top: 1.5em;
 }
 
 .entry-title,
@@ -2184,7 +2186,6 @@ body.search-no-results .page-header {
 	margin-bottom: 2em;
 	padding-top: 1.5em;
 	border-bottom: 1px solid #ccc;
-	border-top: 1px solid #ccc;
 }
 
 .home.blog article.type-newsletter,
