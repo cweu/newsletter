@@ -902,6 +902,7 @@ a:active {
 .social-navigation ul {
 	list-style: none;
 	margin: 0 0 -0.4375em;
+	padding-left: 0;
 }
 
 .social-navigation li {
@@ -2937,7 +2938,11 @@ p > video {
 	.entry-content blockquote:not(.alignleft):not(.alignright),
 	.entry-summary blockquote,
 	.comment-content blockquote {
-		margin: 1em 3em 1em 2em;
+		margin: 1em 0em 1em 2em;
+	}
+
+	blockquote {
+    	font-size: 25px;
 	}
 
 	.entry-content blockquote blockquote:not(.alignleft):not(.alignright),
