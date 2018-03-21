@@ -790,6 +790,7 @@ a:active {
 .site-header-menu.toggled-on,
 .no-js .site-header-menu {
 	display: block;
+	margin: 0.875em 0 0.875em 50%;
 }
 
 .main-navigation {
@@ -840,7 +841,8 @@ a:active {
 }
 
 .main-navigation .primary-menu {
-	border-bottom: 1px solid #d1d1d1;
+	padding-left: 0em;
+	border-bottom: 0px solid #d1d1d1;
 }
 
 .main-navigation .menu-item-has-children > a {
