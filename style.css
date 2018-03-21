@@ -2810,7 +2810,7 @@ p > video {
 	}
 
 	.site-header {
-		padding: 0 4.5455%;
+		padding: 0 6.5% 0 3.2%;
 	}
 
 	.site-branding {
@@ -2855,6 +2855,10 @@ p > video {
 		margin: 1.3125em 0;
 	}
 
+	.site-content {
+		padding: 0 4.5455%;
+	}
+
 	.pagination {
 		margin: 0 23.0769% 4.421052632em 7.6923%
 	}
@@ -2892,8 +2896,8 @@ p > video {
 	.page-header,
 	.page-content,
 	.content-bottom-widgets {
-		margin-right: 15%;
-		margin-left: 15%;
+		margin-right: 5%;
+		margin-left: 5%;
 	}
 
 	/*.entry-title {
