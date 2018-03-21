@@ -1541,7 +1541,7 @@ blockquote:after,
  */
 
 .site-header {
-	padding: 2em 7.6923%;
+	padding: 1em 7.6923% 0;
 }
 
 .site-header-main {
@@ -1599,7 +1599,7 @@ blockquote:after,
 
 /* @todo make temporary hack to get the title we want more general */
 .site-title {
-	width: 6.5em;
+	width: 5.5em;
 	line-height: 0.8 !important;
 	padding-bottom: 0.1ex; /* don't clip font because of line-height */
 }
@@ -2810,7 +2810,7 @@ p > video {
 	}
 
 	.site-header {
-		padding: 1em 7.6923%;
+		padding: 0 4.5455%;
 	}
 
 	.site-branding {
@@ -3032,8 +3032,7 @@ p > video {
 
 @media screen and (min-width: 56.875em) {
 	.site-header {
-		padding-right: 4.5455%;
-		padding-left: 4.5455%;
+		padding: 0 4.5455% 0 4.5455%;
 	}
 
 	.site-header-main {
@@ -3490,7 +3489,7 @@ p > video {
 	}
 
 	.site-header {
-		padding: 1.5em 4.5455% 0 4.5455%;
+		padding: 1.5em 5.4% 0;
 	}
 
 	.site-branding,
@@ -3700,6 +3699,10 @@ p > video {
  */
 
 @media screen and (min-width: 75em) {
+
+	.site-header {
+	padding: 1.5em 4.5455% 0 4.5455%;
+	}
 
 	.home.blog article.type-newsletter_article,
 	.archive article.type-newsletter,
