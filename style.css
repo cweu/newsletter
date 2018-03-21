@@ -2603,11 +2603,11 @@ p > video {
 }
 
 .wp-caption .wp-caption-text {
-	color: #686868;
-	font-size: 13px;
-	font-style: italic;
-	line-height: 1.6153846154;
-	padding-top: 0.5384615385em;
+    color: #1a1a1a;
+    font-size: 16px;
+    font-style: italic;
+    line-height: 1.6153846154;
+    padding-top: 0.5384615385em;
 }
 
 
