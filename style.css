@@ -3481,11 +3481,7 @@ p > video {
 	.archive article.type-newsletter .entry-content,
 	.archive article.type-newsletter .entry-summary,
 	.archive article.type-newsletter .entry-footer,
-	.archive article.type-newsletter .post-thumbnail {
-		margin-left: 6%;
-		margin-right: 6%;
-	}
-
+	.archive article.type-newsletter .post-thumbnail,
 	.home.blog article.type-newsletter_article .entry-header,
 	.home.blog article.type-newsletter_article .entry-content,
 	.home.blog article.type-newsletter_article .entry-summary,
