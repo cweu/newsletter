@@ -81,6 +81,8 @@ function cwa_newsletter_setup() {
 	 */
 	add_theme_support( 'post-thumbnails' );
 	set_post_thumbnail_size( 1200, 9999 );
+	add_image_size( 'newsletter_article-medium', 600, 800 );
+	add_image_size( 'newsletter-medium-square', 400, 300, true );
 
 	register_nav_menus( array(
 		'primary' => __( 'Primary Menu', 'cwa_newsletter' ),
@@ -367,7 +369,7 @@ function cwa_newsletter_content_image_sizes_attr( $sizes, $size ) {
 
 	return $sizes;
 }
-add_filter( 'wp_calculate_image_sizes', 'cwa_newsletter_content_image_sizes_attr', 10 , 2 );
+// add_filter( 'wp_calculate_image_sizes', 'cwa_newsletter_content_image_sizes_attr', 10 , 2 );
 
 /**
  * Add custom image sizes attribute to enhance responsive image functionality
@@ -387,7 +389,7 @@ function cwa_newsletter_post_thumbnail_sizes_attr( $attr, $attachment, $size ) {
 	}
 	return $attr;
 }
-add_filter( 'wp_get_attachment_image_attributes', 'cwa_newsletter_post_thumbnail_sizes_attr', 10 , 3 );
+// add_filter( 'wp_get_attachment_image_attributes', 'cwa_newsletter_post_thumbnail_sizes_attr', 10 , 3 );
 
 /**
  * Modifies tag cloud widget arguments to have all tags in the widget same font size.

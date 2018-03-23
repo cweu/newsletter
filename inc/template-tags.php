@@ -121,7 +121,7 @@ if ( ! function_exists( 'cwa_newsletter_post_thumbnail' ) ) :
  *
  * @since CWA Newsletter 0.1
  */
-function cwa_newsletter_post_thumbnail( $link = true ) {
+function cwa_newsletter_post_thumbnail( $link = true, $size = 'post-thumbnail' ) {
 	if ( post_password_required() || is_attachment() || ! has_post_thumbnail() ) {
 		return;
 	}
@@ -130,19 +130,19 @@ function cwa_newsletter_post_thumbnail( $link = true ) {
 	?>
 
 	<div class="post-thumbnail">
-		<?php the_post_thumbnail(); ?>
+		<?php the_post_thumbnail( $size ); ?>
 	</div><!-- .post-thumbnail -->
 
 	<?php elseif ( $link ) : ?>
 
 	<a class="post-thumbnail" href="<?php the_permalink(); ?>" aria-hidden="true">
-		<?php the_post_thumbnail( 'post-thumbnail', array( 'alt' => the_title_attribute( 'echo=0' ) ) ); ?>
+		<?php the_post_thumbnail( $size, array( 'alt' => the_title_attribute( 'echo=0' ) ) ); ?>
 	</a>
 
 	<?php else : ?>
 
 	<div class="post-thumbnail">
-		<?php the_post_thumbnail( 'post-thumbnail', array( 'alt' => the_title_attribute( 'echo=0' ) ) ); ?>
+		<?php the_post_thumbnail( $size, array( 'alt' => the_title_attribute( 'echo=0' ) ) ); ?>
 	</div>
 
 	<?php endif; // End is_singular()

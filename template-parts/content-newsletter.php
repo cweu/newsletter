@@ -23,7 +23,7 @@ $issue_nr = $pods->field( 'issue_nr' );
 		</header><!-- .entry-header -->
 
 		<div class="newsletter-post-thumbnail-container">
-			<?php cwa_newsletter_post_thumbnail( false ); /* @todo include fallback image */ ?>
+			<?php cwa_newsletter_post_thumbnail( false, 'newsletter-medium-square' ); /* @todo include fallback image */ ?>
 		</div>
 	</a>
 

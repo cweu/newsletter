@@ -26,7 +26,7 @@ $issue_nr = $pods->field( 'issue_nr' );
 
 		<?php cwa_newsletter_excerpt(); ?>
 
-		<?php cwa_newsletter_post_thumbnail( false ); ?>
+		<?php cwa_newsletter_post_thumbnail( false, 'newsletter_article-medium' ); ?>
 	</a>
 
 	<footer class="entry-footer">
