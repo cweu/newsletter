@@ -2215,7 +2215,6 @@ body.search-no-results .page-header {
 	 * TODO custom thumbnail size for type / crop in UI on upload. */
 	height: 300px;
 	overflow: hidden;
-	margin-top: -0.5em;
 }
 
 .blog .entry-title {
@@ -2232,12 +2231,11 @@ body.search-no-results .page-header {
 
 .home.blog article.type-newsletter .entry-header,
 .home.blog article.type-newsletter_article .entry-header,
-.archive article.type-newsletter .entry-header,
 .archive article.type-newsletter_article .entry-header {
 	margin-bottom: 3.25ex; /* make gap between title and text a bit smaller */
 }
 
-
+.archive article.type-newsletter .entry-header,
 .home.blog article.type-newsletter .entry-summary,
 .home.blog article.type-newsletter_article .entry-summary,
 .archive article.type-newsletter .entry-summary,
