@@ -2618,11 +2618,11 @@ p > video {
 }
 
 .wp-caption .wp-caption-text {
-    color: #1a1a1a;
-    font-size: 16px;
-    font-style: italic;
-    line-height: 1.6153846154;
-    padding-top: 0.5384615385em;
+	color: #1a1a1a;
+	font-size: 16px;
+	font-style: italic;
+	line-height: 1.6153846154;
+	padding-top: 0.5384615385em;
 }
 
 
@@ -2956,7 +2956,7 @@ p > video {
 	}
 
 	blockquote {
-    	font-size: 25px;
+		font-size: 25px;
 	}
 
 	.entry-content blockquote blockquote:not(.alignleft):not(.alignright),
@@ -3223,8 +3223,8 @@ p > video {
 	}
 
 	.entry-content .wp-caption.alignnone {
-  	  	margin-right: -9%;
-    	margin-left: -9%;
+		margin-right: -9%;
+		margin-left: -9%;
 	}
 
 	.entry-content .wp-caption.alignleft {
@@ -3738,7 +3738,7 @@ p > video {
 @media screen and (min-width: 75em) {
 
 	.site-header {
-	padding: 1.5em 4.5455% 0 4.5455%;
+		padding: 1.5em 4.5455% 0 4.5455%;
 	}
 
 	.home.blog article.type-newsletter_article,
