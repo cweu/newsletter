@@ -2198,16 +2198,16 @@ body.search-no-results .page-header {
 .home.blog article.type-newsletter_article,
 .archive article.type-newsletter,
 .archive article.type-newsletter_article {
-	margin-bottom: 1em;
+	margin-bottom: 0em;
 }
 
 .home.blog article.type-newsletter_article:after {
-    content: ""; /* This is necessary for the pseudo element to work. */ 
-    display: block; /* This will put the pseudo element on its own line. */
-    margin: 0; /* This will center the border. */
-    width: 25%;
-    padding-top: 2.5em;
-    border-bottom: 1px solid #ccc;
+	content: ""; /* This is necessary for the pseudo element to work. */ 
+	display: block; /* This will put the pseudo element on its own line. */
+	margin: 0; /* This will center the border. */
+	width: 25%;
+	padding-top: 1.5em;
+	border-bottom: 1px solid #ccc;
 }
 
 .newsletter-post-thumbnail-container {
@@ -2233,6 +2233,10 @@ body.search-no-results .page-header {
 .home.blog article.type-newsletter_article .entry-header,
 .archive article.type-newsletter_article .entry-header {
 	margin-bottom: 3.25ex; /* make gap between title and text a bit smaller */
+}
+
+.home.blog article.type-newsletter_article .entry-header {
+	padding-top: 1ex;
 }
 
 .archive article.type-newsletter .entry-header,
