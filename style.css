@@ -2201,6 +2201,15 @@ body.search-no-results .page-header {
 	margin-bottom: 1em;
 }
 
+.home.blog article.type-newsletter_article:after {
+    content: ""; /* This is necessary for the pseudo element to work. */ 
+    display: block; /* This will put the pseudo element on its own line. */
+    margin: 0; /* This will center the border. */
+    width: 25%;
+    padding-top: 2.5em;
+    border-bottom: 1px solid #ccc;
+}
+
 .newsletter-post-thumbnail-container {
 	/* Fixed height to keep floats aligned.
 	 * TODO custom thumbnail size for type / crop in UI on upload. */
