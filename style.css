@@ -2007,7 +2007,6 @@ body:not(.search-results) .entry-summary > :last-child,
 
 .author-bio {
 	color: #686868;
-	font-size: 13px;
 	line-height: 1.6153846154;
 	margin-bottom: 1.6153846154em;
 	overflow: hidden;
@@ -2087,7 +2086,6 @@ body.search-no-results .page-header {
 
 .taxonomy-description {
 	color: #686868;
-	font-size: 13px;
 	line-height: 1.6153846154;
 }
 
@@ -2218,7 +2216,8 @@ body.search-no-results .page-header {
 	overflow: hidden;
 }
 
-.blog .entry-title {
+.blog .entry-title,
+.archive article.type-newsletter_article .entry-title {
 	font-family: Lora, Georgia, serif;
 	font-size: 25px;
 }
@@ -2280,11 +2279,13 @@ body.search-no-results .page-header {
 	margin-bottom: 0;
 }
 
+.archive.category .page-header,
 .archive.post-type-archive-newsletter .page-header,
 .archive.post-type-archive-newsletter_article .page-header {
 	margin-left: 7.6923%;
 }
 
+.archive.category main .pagination,
 .archive.post-type-archive-newsletter main .pagination,
 .archive.post-type-archive-newsletter_article main .pagination {
 	clear: both;
@@ -3038,6 +3039,7 @@ p > video {
 	.archive.post-type-archive-newsletter .page-header {
 		margin-left: 2.5%;
 	}
+	.archive.category .page-header,
 	.archive.post-type-archive-newsletter_article .page-header {
 		margin-left: 7.5%;
 	}
@@ -3503,6 +3505,7 @@ p > video {
 	.archive.post-type-archive-newsletter .page-header {
 		margin-left: 3%;
 	}
+	.archive.category .page-header,
 	.archive.post-type-archive-newsletter_article .page-header {
 		margin-left: 3%;
 	}
@@ -3866,6 +3869,7 @@ p > video {
 	.archive.post-type-archive-newsletter .page-header {
 		margin-left: 2%;
 	}
+	.archive.category .page-header,
 	.archive.post-type-archive-newsletter_article .page-header {
 		margin-left: 2%;
 	}

@@ -242,7 +242,7 @@ function cwa_newsletter_scripts() {
 	wp_enqueue_script( 'cwa_newsletter-html5', get_template_directory_uri() . '/js/html5.js', array(), '3.7.3' );
 	wp_script_add_data( 'cwa_newsletter-html5', 'conditional', 'lt IE 9' );
 
-	if ( is_home() || is_post_type_archive( 'newsletter_article' ) ) {
+	if ( is_home() || is_category() || is_post_type_archive( 'newsletter_article' ) ) {
 		// Register Superclamp.
 		wp_enqueue_script( 'cwa_newsletter-superclamp', get_template_directory_uri() . '/js/superclamp.min.js', array( 'jquery' ), '20161125' );
 		// Load masonry.
@@ -417,6 +417,8 @@ function cwa_newsletter_get_the_archive_title( $title ) {
 		return __( 'Archief', 'cwa_newsletter' );
 	} elseif ( is_post_type_archive( 'newsletter_article' ) ) {
 		return post_type_archive_title( '', false );
+	} else {
+		return $title;
 	}
 }
 add_filter( 'get_the_archive_title', 'cwa_newsletter_get_the_archive_title' );
@@ -466,6 +468,10 @@ function cwa_newsletter_pre_get_posts( $query ) {
 			// We want to show all articles for this issue, no paging.
 			$query->set( 'posts_per_page', -1 );
 
+		} else if ( $query->is_category() ) {
+			// Include newsletter articles in search and category pages.
+			$query->set( 'post_type', array( 'post', 'newsletter_article' ) );
+
 		} else if ( $query->is_archive( 'newsletter' ) ) {
 
 			// Hack to make this a single newsletter.
@@ -476,13 +482,14 @@ function cwa_newsletter_pre_get_posts( $query ) {
 				$query->is_single = 1;
 				$query->is_singular = 1;
 
-			// Order newsletter archive by reverse issue number
+			// Order newsletter archive by reverse issue number.
 			} else {
 				$query->set( 'meta_key', 'issue_nr' );
 				$query->set( 'orderby', 'meta_value_num' );
 				$query->set( 'order', 'DESC' );
 				$query->set( 'posts_per_page', 6 ); // So it fits in a 2- and 3-col grid.
 			}
+
 		}
 	}
 }
