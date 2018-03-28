@@ -1533,9 +1533,10 @@ blockquote:after,
 .site-main {
 	margin-bottom: 1em;
 	border-top: 1px solid #ccc;
-	border-bottom: 1px solid #ccc;
-	border-bottom: 1px solid #ccc;
 	padding-bottom: 3em;
+}
+.site-footer {
+	border-top: 1px solid #ccc;
 }
 
 .site-main > :last-child {
@@ -2202,7 +2203,7 @@ body.search-no-results .page-header {
 }
 
 .home.blog article.type-newsletter_article:after {
-	content: ""; /* This is necessary for the pseudo element to work. */ 
+	content: ""; /* This is necessary for the pseudo element to work. */
 	display: block; /* This will put the pseudo element on its own line. */
 	margin: 0; /* This will center the border. */
 	width: 25%;
