@@ -19,7 +19,7 @@ $issue_nr = $pods->field( 'issue_nr' );
 			<?php endif; ?>
 
 			<h2 class="entry-title"><?php the_title(); ?></h2>
-			<?php if ( ! is_home() ) : ?>
+			<?php if ( ! is_home() && ! is_singular( 'newsletter' ) ) : ?>
 				<div class="entry-meta"><?php echo cwa_newsletter_format_issue_nr( $issue_nr ); ?></div>
 			<?php endif; ?>
 		</header><!-- .entry-header -->

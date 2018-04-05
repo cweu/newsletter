@@ -242,7 +242,7 @@ function cwa_newsletter_scripts() {
 	wp_enqueue_script( 'cwa_newsletter-html5', get_template_directory_uri() . '/js/html5.js', array(), '3.7.3' );
 	wp_script_add_data( 'cwa_newsletter-html5', 'conditional', 'lt IE 9' );
 
-	if ( is_home() || is_category() || is_post_type_archive( 'newsletter_article' ) ) {
+	if ( is_home() || is_category() || is_post_type_archive( 'newsletter_article' ) || is_singular( 'newsletter' ) ) {
 		// Register Superclamp.
 		wp_enqueue_script( 'cwa_newsletter-superclamp', get_template_directory_uri() . '/js/superclamp.min.js', array( 'jquery' ), '20161125' );
 		// Load masonry.

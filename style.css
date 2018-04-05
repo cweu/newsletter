@@ -2186,7 +2186,8 @@ body.search-no-results .page-header {
 	display: none;
 }
 
-.home.blog .site-main > header {
+.home.blog .site-main > header,
+.single-newsletter .site-main > header {
 	text-align: center;
 	margin-bottom: 2em;
 	padding-top: 1.5em;
@@ -2195,12 +2196,14 @@ body.search-no-results .page-header {
 
 .home.blog article.type-newsletter,
 .home.blog article.type-newsletter_article,
+.single-newsletter article.type-newsletter_article,
 .archive article.type-newsletter,
 .archive article.type-newsletter_article {
 	margin-bottom: 0em;
 }
 
-.home.blog article.type-newsletter_article:after {
+.home.blog article.type-newsletter_article:after,
+.single-newsletter article.type-newsletter_article:after {
 	content: ""; /* This is necessary for the pseudo element to work. */
 	display: block; /* This will put the pseudo element on its own line. */
 	margin: 0; /* This will center the border. */
@@ -2217,6 +2220,7 @@ body.search-no-results .page-header {
 }
 
 .blog .entry-title,
+.single-newsletter article.type-newsletter_article .entry-title,
 .archive article.type-newsletter_article .entry-title {
 	font-family: Lora, Georgia, serif;
 	font-size: 25px;
@@ -2224,6 +2228,7 @@ body.search-no-results .page-header {
 
 .home.blog article.type-newsletter a,
 .home.blog article.type-newsletter_article a,
+.single-newsletter article.type-newsletter_article a,
 .archive article.type-newsletter a,
 .archive article.type-newsletter_article a {
 	color: inherit;
@@ -2231,17 +2236,20 @@ body.search-no-results .page-header {
 
 .home.blog article.type-newsletter .entry-header,
 .home.blog article.type-newsletter_article .entry-header,
+.single-newsletter article.type-newsletter_article .entry-header,
 .archive article.type-newsletter_article .entry-header {
 	margin-bottom: 3.25ex; /* make gap between title and text a bit smaller */
 }
 
-.home.blog article.type-newsletter_article .entry-header {
+.home.blog article.type-newsletter_article .entry-header,
+.single-newsletter article.type-newsletter_article .entry-header {
 	padding-top: 1ex;
 }
 
 .archive article.type-newsletter .entry-header,
 .home.blog article.type-newsletter .entry-summary,
 .home.blog article.type-newsletter_article .entry-summary,
+.single-newsletter article.type-newsletter_article .entry-summary,
 .archive article.type-newsletter .entry-summary,
 .archive article.type-newsletter_article .entry-summary {
 	margin-bottom: 2ex; /* make gap between text and image a bit smaller */
@@ -2249,6 +2257,7 @@ body.search-no-results .page-header {
 
 .home.blog article.type-newsletter .entry-summary > p,
 .home.blog article.type-newsletter_article .entry-summary > p,
+.single-newsletter article.type-newsletter_article .entry-summary > p,
 .archive article.type-newsletter .entry-summary > p,
 .archive article.type-newsletter_article .entry-summary > p {
 	max-height: 21ex; /* using Superclamp for ellipsis */
@@ -2927,6 +2936,7 @@ p > video {
 
 	.home.blog article.type-newsletter,
 	.home.blog article.type-newsletter_article,
+	.single-newsletter article.type-newsletter_article,
 	.archive article.type-newsletter,
 	.archive article.type-newsletter_article {
 		float: left;
@@ -3493,6 +3503,11 @@ p > video {
 	.home.blog article.type-newsletter_article .entry-summary,
 	.home.blog article.type-newsletter_article .entry-footer,
 	.home.blog article.type-newsletter_article .post-thumbnail,
+	.single-newsletter article.type-newsletter_article .entry-header,
+	.single-newsletter article.type-newsletter_article .entry-content,
+	.single-newsletter article.type-newsletter_article .entry-summary,
+	.single-newsletter article.type-newsletter_article .entry-footer,
+	.single-newsletter article.type-newsletter_article .post-thumbnail,
 	.archive article.type-newsletter_article .entry-header,
 	.archive article.type-newsletter_article .entry-content,
 	.archive article.type-newsletter_article .entry-summary,
@@ -3743,6 +3758,7 @@ p > video {
 	}
 
 	.home.blog article.type-newsletter_article,
+	.single-newsletter article.type-newsletter_article,
 	.archive article.type-newsletter,
 	.archive article.type-newsletter_article {
 		width: 33.33%;
