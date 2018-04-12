@@ -16,7 +16,11 @@ get_header(); ?>
 		while ( have_posts() ) : the_post();
 
 			// Include the single post content template.
-			get_template_part( 'template-parts/content', 'single' );
+			$part_name = 'single';
+			if ( in_array( get_post_type(), array( 'newsletter', 'newsletter_article' ), true ) ) {
+				$part_name = $part_name . '-' . get_post_type();
+			}
+			get_template_part( 'template-parts/content', $part_name );
 
 			// If comments are open or we have at least one comment, load up the comment template.
 			if ( comments_open() || get_comments_number() ) {

@@ -201,8 +201,8 @@
 	// Initialize Masonry (if loaded)
 	if ( typeof(Masonry) !== 'undefined' ) {
 		$( document ).imagesLoaded( function() {
-			$grid = $( 'main > .the-content' ).masonry({
-				initLayout: false,
+			$grid = $( 'main > article > .the-content' ).masonry({
+				isInitLayout: false,
 				itemSelector: 'article',
 				percentPosition: true,
 			});

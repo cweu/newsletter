@@ -1713,6 +1713,16 @@ blockquote:after,
 	line-height: 1.1;
 }
 
+.view-pdf {
+	font-size: 75%;
+	color: #888;
+}
+a.view-pdf:active,
+a.view-pdf:focus,
+a.view-pdf:hover {
+	color: lightseagreen;
+}
+
 .entry-title a {
 	color: #1a1a1a;
 }
@@ -2186,23 +2196,19 @@ body.search-no-results .page-header {
 	display: none;
 }
 
-.home.blog .site-main > header,
-.single-newsletter .site-main > header {
+.single-newsletter .site-main > article.type-newsletter > header {
 	text-align: center;
 	margin-bottom: 2em;
 	padding-top: 1.5em;
 	border-bottom: 1px solid #ccc;
 }
 
-.home.blog article.type-newsletter,
-.home.blog article.type-newsletter_article,
 .single-newsletter article.type-newsletter_article,
 .archive article.type-newsletter,
 .archive article.type-newsletter_article {
 	margin-bottom: 0em;
 }
 
-.home.blog article.type-newsletter_article:after,
 .single-newsletter article.type-newsletter_article:after {
 	content: ""; /* This is necessary for the pseudo element to work. */
 	display: block; /* This will put the pseudo element on its own line. */
@@ -2226,37 +2232,28 @@ body.search-no-results .page-header {
 	font-size: 25px;
 }
 
-.home.blog article.type-newsletter a,
-.home.blog article.type-newsletter_article a,
 .single-newsletter article.type-newsletter_article a,
 .archive article.type-newsletter a,
 .archive article.type-newsletter_article a {
 	color: inherit;
 }
 
-.home.blog article.type-newsletter .entry-header,
-.home.blog article.type-newsletter_article .entry-header,
 .single-newsletter article.type-newsletter_article .entry-header,
 .archive article.type-newsletter_article .entry-header {
 	margin-bottom: 3.25ex; /* make gap between title and text a bit smaller */
 }
 
-.home.blog article.type-newsletter_article .entry-header,
 .single-newsletter article.type-newsletter_article .entry-header {
 	padding-top: 1ex;
 }
 
 .archive article.type-newsletter .entry-header,
-.home.blog article.type-newsletter .entry-summary,
-.home.blog article.type-newsletter_article .entry-summary,
 .single-newsletter article.type-newsletter_article .entry-summary,
 .archive article.type-newsletter .entry-summary,
 .archive article.type-newsletter_article .entry-summary {
 	margin-bottom: 2ex; /* make gap between text and image a bit smaller */
 }
 
-.home.blog article.type-newsletter .entry-summary > p,
-.home.blog article.type-newsletter_article .entry-summary > p,
 .single-newsletter article.type-newsletter_article .entry-summary > p,
 .archive article.type-newsletter .entry-summary > p,
 .archive article.type-newsletter_article .entry-summary > p {
@@ -2934,8 +2931,11 @@ p > video {
 		margin-bottom: 0.8484848485em;
 	}*/
 
-	.home.blog article.type-newsletter,
-	.home.blog article.type-newsletter_article,
+	.single-newsletter .page-header {
+		margin-left: 0;
+		margin-right: 0;
+	}
+
 	.single-newsletter article.type-newsletter_article,
 	.archive article.type-newsletter,
 	.archive article.type-newsletter_article {
@@ -3498,11 +3498,6 @@ p > video {
 	.archive article.type-newsletter .entry-summary,
 	.archive article.type-newsletter .entry-footer,
 	.archive article.type-newsletter .post-thumbnail,
-	.home.blog article.type-newsletter_article .entry-header,
-	.home.blog article.type-newsletter_article .entry-content,
-	.home.blog article.type-newsletter_article .entry-summary,
-	.home.blog article.type-newsletter_article .entry-footer,
-	.home.blog article.type-newsletter_article .post-thumbnail,
 	.single-newsletter article.type-newsletter_article .entry-header,
 	.single-newsletter article.type-newsletter_article .entry-content,
 	.single-newsletter article.type-newsletter_article .entry-summary,
@@ -3757,7 +3752,6 @@ p > video {
 		padding: 1.5em 4.5455% 0 4.5455%;
 	}
 
-	.home.blog article.type-newsletter_article,
 	.single-newsletter article.type-newsletter_article,
 	.archive article.type-newsletter,
 	.archive article.type-newsletter_article {

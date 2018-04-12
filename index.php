@@ -21,20 +21,10 @@ get_header(); ?>
 
 		<?php if ( have_posts() ) : ?>
 
-			<?php if ( is_home() ) : ?>
-				<?php if ( is_front_page() ) : ?>
-					<?php $pods = cwa_newsletter_latest_newsletter(); ?>
-					<?php if ( $pods ) : ?>
-						<header>
-							<h1 class="page-title"><?php echo esc_html( $pods->field( 'title' ) ); ?></h1>
-							<p class="page-subtitle"><?php echo esc_html( cwa_newsletter_format_issue_nr( $pods->field( 'issue_nr' ) ) ); ?></p>
-						</header>
-					<?php endif; ?>
-				<?php else : ?>
-					<header>
-						<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
-					</header>
-				<?php endif; ?>
+			<?php if ( is_home() && ! is_front_page() ) : ?>
+				<header>
+					<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
+				</header>
 			<?php endif; ?>
 
 			<div class="the-content">

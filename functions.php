@@ -292,6 +292,11 @@ function cwa_newsletter_body_classes( $classes ) {
 		$classes[] = 'hfeed';
 	}
 
+	// Add single-newsletter class to home, as we show the last issue.
+	if ( is_home() ) {
+		$classes[] = 'single-newsletter';
+	}
+
 	return $classes;
 }
 add_filter( 'body_class', 'cwa_newsletter_body_classes' );
@@ -445,28 +450,12 @@ function cwa_newsletter_pre_get_posts( $query ) {
 			));
 		}
 
-		// Show articles of last published newsletter on the frontpage.
-		// @todo Only if blog.
+		// Show the last published newsletter on the (blog) frontpage.
 		if ( $query->is_home() ) {
-			// Only show newsletter articles.
-			$query->set( 'post_type', 'newsletter_article' );
-			// Of the last published issue (or none at all).
-			$issue = cwa_newsletter_latest_newsletter();
-			// Filter by issue number (using meta_query so meta_key is available for ordering).
-			// If there is no latest issue, we don't want to show anything, use dummy string.
-			$number = $issue ? $issue->field( 'issue_nr' ) : '__xxxxxxxxx__';
-			$query->set( 'meta_query', array(
-				array(
-					'key'   => 'issue_nr',
-					'value' => $number,
-				),
-			));
-			// Order by page number.
-			$query->set( 'meta_key', 'page_nr' );
+			$query->set( 'post_type', 'newsletter' );
+			$query->set( 'meta_key', 'issue_nr' );
 			$query->set( 'orderby', 'meta_value_num' );
-			$query->set( 'order', 'ASC' );
-			// We want to show all articles for this issue, no paging.
-			$query->set( 'posts_per_page', -1 );
+			$query->set( 'limit', 1 );
 
 		} else if ( $query->is_category() ) {
 			// Include newsletter articles in search and category pages.
