@@ -18,7 +18,7 @@ $pdf_link = $pods->field( 'pdf_file' )['guid'];
 		<?php the_title( '<h1 class="page-title">', '</h1>' ); ?>
 		<p class="page-subtitle">
 			<?php echo esc_html( cwa_newsletter_format_issue_nr( $issue_nr ) ); ?>
-			<a href="<?php esc_url( $pdf_link ); ?>" class="view-pdf">(<?php esc_html_e( 'View PDF', 'cwa_newsletter' ); ?>)</a>
+			<a href="<?php echo esc_url( $pdf_link ); ?>" class="view-pdf">(<?php esc_html_e( 'View PDF', 'cwa_newsletter' ); ?>)</a>
 		</p>
 	</header><!-- .page-header -->
 
