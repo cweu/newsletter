@@ -18,7 +18,9 @@ $pdf_link = $pods->field( 'pdf_file' )['guid'];
 		<?php the_title( '<h1 class="page-title">', '</h1>' ); ?>
 		<p class="page-subtitle">
 			<?php echo esc_html( cwa_newsletter_format_issue_nr( $issue_nr ) ); ?>
-			<a href="<?php echo esc_url( $pdf_link ); ?>" class="view-pdf">(<?php esc_html_e( 'View PDF', 'cwa_newsletter' ); ?>)</a>
+			<?php if ( $pdf_link ) : ?>
+				<a href="<?php echo esc_url( $pdf_link ); ?>" class="view-pdf">(<?php esc_html_e( 'View PDF', 'cwa_newsletter' ); ?>)</a>
+			<?php endif; ?>
 		</p>
 	</header><!-- .page-header -->
 
@@ -40,9 +42,13 @@ $pdf_link = $pods->field( 'pdf_file' )['guid'];
 
 	<?php if ( ! $query->have_posts() ) : ?>
 
-		<a href="<?php echo esc_url( $pdf_link ); ?>" style="text-align: center; display: block;">
+		<?php if ( $pdf_link ) : ?>
+			<a href="<?php echo esc_url( $pdf_link ); ?>" style="text-align: center; display: block;">
+				<?php cwa_newsletter_post_thumbnail( false, 'medium' ); /* @todo include fallback image */ ?>
+			</a>
+		<?php else : ?>
 			<?php cwa_newsletter_post_thumbnail( false, 'medium' ); /* @todo include fallback image */ ?>
-		</a>
+		<?php endif; ?>
 
 	<?php else : ?>
 		<div class="the-content">
