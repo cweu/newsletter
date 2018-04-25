@@ -28,7 +28,7 @@ function cwa_newsletter_add_post_type_link( $url, $post ) {
 	// Substitute issue number in our custom post types.
 	$post_type = get_post_type( $post );
 	if ( 'newsletter' === $post_type || 'newsletter_article' === $post_type ) {
-		$pods = pods( get_post_type( $post ), get_the_ID( $post ) );
+		$pods = pods( get_post_type( $post ), $post->ID );
 		$url  = str_replace( '%issue_nr%', $pods->field( 'issue_nr' ), $url );
 	}
 	return $url;

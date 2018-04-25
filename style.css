@@ -774,6 +774,13 @@ a:active {
 	box-shadow: none;
 }
 
+.entry-meta a {
+  color: inherit;
+}
+.entry-meta a:hover,
+.entry-meta a:focus {
+	color: lightseagreen;
+}
 
 /**
  * 6.2 - Menus

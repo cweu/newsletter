@@ -11,13 +11,15 @@ $pods       = pods( 'newsletter_article', get_the_ID() );
 $intro      = $pods->field( 'intro' );
 $issue_nr   = $pods->field( 'issue_nr' );
 $issue_date = null;
+$issue_link = null;
 
 if ( $issue_nr ) {
 	// Get issue date from newsletter, referenced by the issue number.
 	$newsletter_pods = cwa_newsletter_pod_by_nr( 'newsletter', $issue_nr );
 	if ( $newsletter_pods ) {
 		$issue_date = strtotime( $newsletter_pods->field( 'pub_date' ) );
-	}
+		$issue_link = get_permalink( $newsletter_pods->id() );
+  }
 }
 ?>
 
@@ -30,11 +32,11 @@ if ( $issue_nr ) {
 		<div class="entry-meta">
 			<?php
 				// Show "<author>, <date>, <issue>" (depending on which fields are present).
-				echo esc_html( implode( ', ', array_filter( array(
-					get_the_author(),
-					$issue_date ? date_i18n( get_option( 'date_format' ), $issue_date ) : null,
-					$issue_nr ? cwa_newsletter_format_issue_nr( $issue_nr ) : null,
-				) ) ) );
+				echo implode( ', ', array_filter( array(
+					esc_html( get_the_author() ),
+					$issue_date ? esc_html( date_i18n( get_option( 'date_format' ), $issue_date ) ) : null,
+					$issue_nr ? ('<a href="' . esc_url( $issue_link ) . '">' . cwa_newsletter_format_issue_nr( $issue_nr ) . '</a>') : null,
+				) ) );
 			?>
 		</div>
 	</header><!-- .entry-header -->
