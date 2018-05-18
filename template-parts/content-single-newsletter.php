@@ -10,6 +10,15 @@
 $pods     = pods( 'newsletter', get_the_ID() );
 $issue_nr = $pods->field( 'issue_nr' );
 $pdf_link = $pods->field( 'pdf_file' )['guid'];
+
+// Allow viewing of pending articles in pending newsletters.
+$statuses = array();
+switch( get_post_status() ) {
+	case 'draft':   $statuses[] = 'draft';
+	case 'pending': $statuses[] = 'pending';
+	case 'future':  $statuses[] = 'future';
+	default:        $statuses[] = 'publish';
+}
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
@@ -26,7 +35,6 @@ $pdf_link = $pods->field( 'pdf_file' )['guid'];
 
 	<?php
 	// Start the article loop.
-	// @todo Move to function and use that too in pre_get_posts.
 	$query = new WP_Query( array(
 		'post_type'      => 'newsletter_article',
 		'meta_query'     => array(
@@ -36,6 +44,7 @@ $pdf_link = $pods->field( 'pdf_file' )['guid'];
 		'meta_key'       => 'page_nr',
 		'orderby'        => 'meta_value_num',
 		'order'          => 'ASC',
+		'post_status'    => $statuses,
 		'posts_per_page' => -1,
 	));
 	?>
