@@ -30,6 +30,9 @@ switch( get_post_status() ) {
 			<?php if ( $pdf_link ) : ?>
 				<a href="<?php echo esc_url( $pdf_link ); ?>" class="view-pdf">(<?php esc_html_e( 'View PDF', 'cwa_newsletter' ); ?>)</a>
 			<?php endif; ?>
+			<?php if ( current_user_can( 'edit_post', get_post() ) ) : ?>
+				<a href="<?php echo esc_url( add_query_arg( 'template', 'mail', get_permalink() ) ); ?>" class="view-pdf">(<?php esc_html_e( 'Mail template' , 'cwa_newsletter' ); ?>)</a>
+			<?php endif; ?>
 		</p>
 	</header><!-- .page-header -->
 

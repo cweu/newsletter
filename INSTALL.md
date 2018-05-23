@@ -27,6 +27,7 @@
       1. Custom link to '/' named _Voorpagina_
       2. Newsletter archives named _Archief_
    7. Add menu _Social Links_, adding custom links for _Facebook_ and _Twitter_
+   8. Set menu _Mail Footer_ to the primary menu.
 6. Configure permalinks
    1. Install plugin: _Custom Post Type Permalinks_
    2. For `newsletter_article` set permalink to: `/%issue_nr%/%postname%-%post_id%/`
