@@ -166,9 +166,11 @@ switch( get_post_status() ) {
 												<?php
 												endwhile;
 												wp_reset_postdata();
-
+												?>
+												<hr>
+												<?php
 												cwa_newsletter_mailfooter_menu( array(
-													'items_wrap'     => '<hr><center><p style="font-family: serif; font-size: 14px; font-weight: normal; margin: 0; margin-bottom: 15px;">%3$s</p></center>',
+													'items_wrap'     => '<center><p style="font-family: serif; font-size: 14px; font-weight: normal; margin: 0; margin-bottom: 15px;">%3$s</p></center>',
 												) );
 												?>
 												<center>
