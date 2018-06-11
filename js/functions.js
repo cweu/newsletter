@@ -212,6 +212,14 @@
 				});
 			}
 			$grid.masonry();
+
+			$( 'main > .the-content' ).infiniteScroll({
+				path: 'nav.pagination > .nav-links > a.next',
+				append: 'main > .the-content > article',
+				hideNav: 'nav.pagination',
+				history: false,
+				outlayer: $grid.data('masonry')
+			});
 		});
 
 	// Initialize Superclamp (if loaded and Masonry isn't loaded)

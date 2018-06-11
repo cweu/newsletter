@@ -259,7 +259,7 @@ function cwa_newsletter_scripts() {
 		wp_enqueue_script( 'cwa_newsletter-keyboard-image-navigation', get_template_directory_uri() . '/js/keyboard-image-navigation.js', array( 'jquery' ), '20160816' );
 	}
 
-	wp_enqueue_script( 'cwa_newsletter-script', get_template_directory_uri() . '/js/functions.js', array( 'jquery' ), '20180102', true );
+	wp_enqueue_script( 'cwa_newsletter-script', get_template_directory_uri() . '/js/functions.js', array( 'jquery' ), '20180611', true );
 
 	wp_localize_script( 'cwa_newsletter-script', 'screenReaderText', array(
 		'expand'   => __( 'expand child menu', 'cwa_newsletter' ),
@@ -347,6 +347,8 @@ require get_template_directory() . '/inc/template-tags.php';
  * Customizer additions.
  */
 require get_template_directory() . '/inc/customizer.php';
+
+require get_template_directory() . '/inc/infinite-scroll.php';
 
 /**
  * Backend admin twaeks.
