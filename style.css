@@ -35,6 +35,7 @@ GitHub Theme URI: https://github.com/cweu/newsletter
  *    11.3 - Post Formats
  *    11.4 - Comments
  *    11.6 - Footer
+ *    11.7 - Theme-specific
  * 12.0 - Media
  *    12.1 - Captions
  *    12.2 - Galleries
@@ -2547,6 +2548,30 @@ body.search-no-results .page-header {
 	font-weight: 400;
 }
 
+/**
+ * 11.7 - Theme-specific (CWA Newsletter)
+ */
+
+.archive .category-index .page-header {
+	margin-left: 50px;
+}
+
+ul.cat-index {
+	display: block;
+}
+
+ul.cat-index .cat-item {
+  list-style-type: none;
+  display: inline-block;
+  width: 100%;
+  padding: 10px;
+  color: #aaa;
+}
+ul.cat-index .cat-item > a {
+	white-space: nowrap;
+	overflow-x: hidden;
+}
+
 
 /**
  * 12.0 - Media
@@ -3060,6 +3085,14 @@ p > video {
 	.archive.post-type-archive-newsletter_article .page-header {
 		margin-left: 7.5%;
 	}
+
+	.archive .category-index .page-header {
+		margin-left: 50px;
+	}
+
+	ul.cat-index .cat-item {
+		width: 49%;
+	}
 }
 
 
@@ -3531,6 +3564,14 @@ p > video {
 		padding-right: 15%;
 		padding-left: 15%;
 	}
+
+	.archive .category-index .page-header {
+		margin-left: 50px;
+	}
+
+	ul.cat-index .cat-item {
+		width: 32%;
+	}
 }
 
 
@@ -3889,6 +3930,10 @@ p > video {
 	.archive.category .page-header,
 	.archive.post-type-archive-newsletter_article .page-header {
 		margin-left: 2%;
+	}
+
+	.archive .category-index .page-header {
+		margin-left: 50px;
 	}
 }
 

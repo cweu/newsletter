@@ -349,6 +349,7 @@ require get_template_directory() . '/inc/template-tags.php';
 require get_template_directory() . '/inc/customizer.php';
 
 require get_template_directory() . '/inc/infinite-scroll.php';
+require get_template_directory() . '/inc/category-index.php';
 
 /**
  * Backend admin twaeks.
