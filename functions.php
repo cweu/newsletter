@@ -356,6 +356,7 @@ require get_template_directory() . '/inc/category-index.php';
  */
 require get_template_directory() . '/inc/admin-noblog.php';
 require get_template_directory() . '/inc/admin-columns.php';
+require get_template_directory() . '/inc/admin-pubdate.php';
 
 /**
  * Add custom image sizes attribute to enhance responsive image functionality
