@@ -10,7 +10,7 @@
 // @todo simplify if-statement
 // @todo avoid code duplication with functions.php
  function cwa_newsletter_infinite_scroll_desired() {
-	 return is_category() || is_post_type_archive( 'newsletter_article' ) || is_singular( 'newsletter' );
+	 return is_category() || is_post_type_archive( 'newsletter_article' ) || is_post_type_archive( 'newsletter' ) || is_singular( 'newsletter' );
  }
 
 function cwa_newsletter_infinite_scroll_enqueue_scripts() {
