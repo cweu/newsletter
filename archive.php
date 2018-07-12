@@ -49,6 +49,8 @@ get_header(); ?>
 
 			<?php
 
+			get_template_part( 'template-parts/infinite-scroll-status' );
+
 			// Previous/next page navigation.
 			the_posts_pagination( array(
 				'prev_text'          => __( 'Previous page', 'cwa_newsletter' ),

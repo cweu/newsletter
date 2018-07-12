@@ -217,6 +217,7 @@
 				path: 'nav.pagination > .nav-links > a.next',
 				append: 'main > .the-content > article',
 				hideNav: 'nav.pagination',
+				status: '.page-load-status',
 				history: false,
 				outlayer: $grid.data('masonry')
 			});

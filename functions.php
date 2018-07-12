@@ -259,7 +259,7 @@ function cwa_newsletter_scripts() {
 		wp_enqueue_script( 'cwa_newsletter-keyboard-image-navigation', get_template_directory_uri() . '/js/keyboard-image-navigation.js', array( 'jquery' ), '20160816' );
 	}
 
-	wp_enqueue_script( 'cwa_newsletter-script', get_template_directory_uri() . '/js/functions.js', array( 'jquery' ), '20180611', true );
+	wp_enqueue_script( 'cwa_newsletter-script', get_template_directory_uri() . '/js/functions.js', array( 'jquery' ), '20180710', true );
 
 	wp_localize_script( 'cwa_newsletter-script', 'screenReaderText', array(
 		'expand'   => __( 'expand child menu', 'cwa_newsletter' ),
@@ -469,6 +469,9 @@ function cwa_newsletter_pre_get_posts( $query ) {
 		} else if ( $query->is_category() ) {
 			// Include newsletter articles in search and category pages.
 			$query->set( 'post_type', array( 'post', 'newsletter_article' ) );
+
+// DEBUG
+$query->set( 'posts_per_page', 3 ); // So it fits in a 2- and 3-col grid.
 
 		} else if ( $query->is_archive( 'newsletter' ) ) {
 
