@@ -69,8 +69,8 @@ function cwa_newsletter_setup() {
 	 *  @since CWA Newsletter 0.1
 	 */
 	add_theme_support( 'custom-logo', array(
-		'height'      => 240,
-		'width'       => 240,
+		'height'      => 485,
+		'width'       => 866,
 		'flex-height' => true,
 	) );
 
